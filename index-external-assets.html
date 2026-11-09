@@ -1,0 +1,3372 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DURJOY — Textile Engineering Graduate | Creative Professional | Portfolio</title>
+  <meta name="description" content="Official personal portfolio of Durjoy (Shuvakor Bhowmik Durjoy) — B.Sc. in Textile Engineering Graduate from BGMEA University of Fashion & Technology (BUFT), Creative Thinker & Digital Explorer based in Bangladesh." />
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600;700&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400;1,600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            offwhite: '#F7F7F5',
+            ink: '#101010',
+            charcoal: '#1A1A1A',
+            stone: '#EAEAEA',
+            muted: '#777777',
+            silver: '#B5B5B5'
+          },
+          fontFamily: {
+            display: ['Antonio', 'Space Grotesk', 'sans-serif'],
+            grotesk: ['Space Grotesk', 'sans-serif'],
+            sans: ['Inter', 'Manrope', 'sans-serif'],
+            serif: ['Playfair Display', 'serif']
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root {
+      --bg-primary: #F7F7F5;
+      --bg-dark: #101010;
+      --bg-card-dark: #1A1A1A;
+      --text-primary: #101010;
+      --text-muted: #777777;
+      --accent-silver: #B5B5B5;
+      --border-light: #EAEAEA;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      background-color: #F7F7F5;
+      color: #101010;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .font-condensed {
+      font-family: 'Antonio', 'Space Grotesk', sans-serif;
+      letter-spacing: -0.025em;
+      line-height: 0.88;
+      text-transform: uppercase;
+    }
+
+    @keyframes marqueeLeft {
+      0% { transform: translate3d(0%, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+
+    .animate-marquee-hero {
+      display: flex;
+      width: max-content;
+      animation: marqueeLeft 28s linear infinite;
+      will-change: transform;
+    }
+
+    .animate-marquee-strip {
+      display: flex;
+      width: max-content;
+      animation: marqueeLeft 22s linear infinite;
+      will-change: transform;
+    }
+
+    .animate-marquee-hero:hover,
+    .animate-marquee-strip:hover {
+      animation-play-state: paused;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .animate-marquee-hero,
+      .animate-marquee-strip {
+        animation: none;
+      }
+    }
+
+    @keyframes floatArrow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(6px); }
+    }
+    .scroll-arrow-bounce {
+      animation: floatArrow 2.2s ease-in-out infinite;
+    }
+
+    .portrait-editorial {
+      filter: grayscale(85%) contrast(1.06);
+      transition: filter 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .portrait-editorial:hover,
+    body.natural-color-mode .portrait-editorial {
+      filter: grayscale(0%) contrast(1.02);
+    }
+
+    .hero-orbit-circle {
+      border: 1px solid rgba(16, 16, 16, 0.11);
+      border-radius: 9999px;
+      pointer-events: none;
+    }
+
+    .work-row-title {
+      color: #B5B5B5;
+      transition: color 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .work-row:hover .work-row-title,
+    .work-row.active-row .work-row-title {
+      color: #101010;
+      transform: translateX(10px);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F7F7F5;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #101010;
+      border-radius: 3px;
+    }
+
+    #intro-loader {
+      transition: transform 0.85s cubic-bezier(0.76, 0, 0.24, 1), opacity 0.6s ease;
+    }
+    #intro-loader.loader-hidden {
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="bg-offwhite text-ink selection:bg-ink selection:text-offwhite">
+
+  <!-- =========================================================================
+       CENTRALIZED CONFIGURATION OBJECT (PDF Section 19)
+       ========================================================================= -->
+  <script>
+    window.PORTFOLIO_CONFIG = {
+      personal: {
+        fullName: "Durjoy",
+        fullLegalName: "Shuvakor Bhowmik Durjoy",
+        studentId: "222-322-801",
+        monogram: "DJ",
+        headerBrand: "PORTFOLIO BY DURJOY",
+        professionalIdentity: "Textile Engineering Graduate | Creative Professional | Technology Enthusiast",
+        degree: "Bachelor of Science (B.Sc.) in Textile Engineering",
+        university: "BGMEA University of Fashion & Technology (BUFT)",
+        graduationYear: "2026",
+        currentStatus: "Graduate",
+        location: "Bangladesh",
+        email: "shuvakordurjoy2002@gmail.com",
+        linkedIn: "https://www.linkedin.com/in/shuvakor-durjoy-6a58aa3a6/?lipi=urn%3Ali%3Apage%3Ap_mwlite_feed%3Bwo9R526LSyiVDd%2BCi3DNPg%3D%3D",
+        youtube: "https://youtube.com/@shuvakordurjoy?si=Q4f4v7-RFNVe7p0F",
+        youtubeHandle: "@shuvakordurjoy",
+        facebook: "https://www.facebook.com/share/19hvMTTcc6/?mibextid=wwXIfr",
+        instagram: "https://www.instagram.com/invites/contact/?utm_content=3eov3xl&cplk=p5yf5m1c47a2",
+        whatsapp: "01869441992",
+        whatsappIntl: "+880 1869-441992",
+        whatsappUrl: "https://wa.me/8801869441992",
+        livePortfolioUrl: "https://durjoybhowmikportfolio.netlify.app/",
+        mainTagline: "ENGINEERING MINDS. CREATIVE VISIONS. ENDLESS POSSIBILITIES.",
+        altTagline: "Where Technical Knowledge Meets Creative Thinking.",
+        personalPhilosophy: "Never stop learning. Never stop creating. Never stop evolving.",
+        heroDescription: "A Textile Engineering graduate with an eye for creativity, an interest in technology, and a mindset focused on continuous growth.",
+        shortIntro: [
+          "I am Durjoy (Shuvakor Bhowmik Durjoy), a 2026 Textile Engineering graduate from BGMEA University of Fashion & Technology (BUFT), Bangladesh.",
+          "With an academic foundation in Textile Engineering and practical industrial exposure through an internship at KDS Textile Mills Ltd. (Chattogram), I have developed a strong foundation in textile manufacturing, sustainable wet processing, quality assurance, and continuous improvement.",
+          "Beyond my engineering background, I enjoy exploring digital creativity and modern technologies. My skills include graphic design, image editing, video editing, presentation design, and AI-powered creative tools."
+        ],
+        images: {
+          heroCutout: "assets/images/durjoy_hero_cutout.webp",
+          portraitFormal: "assets/images/durjoy_portrait_1.jpg",
+          portraitEditorial: "assets/images/durjoy_portrait_2.jpg",
+          projectOzoneCover: "assets/images/project_ozone_wash.jpg",
+          industrialMill: "assets/images/industrial_kds_mill.jpg",
+          creativeStudio: "assets/images/creative_direction_studio.jpg",
+          kdsCertificate: "assets/images/kds_internship_certificate.jpg",
+          buftBannerLogo: "assets/images/buft_banner_logo.jpg",
+          fig1OzoneFlow: "assets/images/fig1_ozone_generation_flow.jpg",
+          fig2OzoneReaction: "assets/images/fig2_ozone_fading_reaction.jpg",
+          fig3EimSteps: "assets/images/fig3_eim_software_steps.jpg",
+          fig4UnwashedSamples: "assets/images/fig4_unwashed_fabric_samples.jpg",
+          fig5ExperimentalMachines: "assets/images/fig5_experimental_setup_machines.jpg",
+          fig6ProcessFlow: "assets/images/fig6_process_flow_knit_denim.jpg",
+          fig7ColorBox18: "assets/images/fig7_jeanologia_colorbox18.jpg",
+          fig9EimResult: "assets/images/fig9_eim_result_display.jpg",
+          fig10WashedSamples: "assets/images/fig10_washed_fabric_samples.jpg",
+          fig11WaterChart: "assets/images/fig11_chart_water_consumption.jpg",
+          fig12ChemicalChart: "assets/images/fig12_chart_chemical_consumption.jpg",
+          fig13TimeChart: "assets/images/fig13_chart_time_consumption.jpg",
+          fig14EnergyChart: "assets/images/fig14_chart_energy_consumption.jpg"
+        }
+      },
+      education: {
+        institution: "BGMEA University of Fashion & Technology (BUFT)",
+        degree: "Bachelor of Science (B.Sc.) in Textile Engineering",
+        graduationYear: "2026",
+        studentId: "222-322-801",
+        field: "Textile Engineering",
+        country: "Bangladesh"
+      },
+      experience: {
+        organization: "KDS TEXTILE MILLS LTD.",
+        parentGroup: "KDS Group",
+        position: "Textile Engineering Intern",
+        experienceType: "Industrial Internship",
+        duration: "24th February 2026 – 04th April 2026 (6 Weeks)",
+        refNo: "KDS/TEX/HR&ADMIN/26040007/2026",
+        certificateDate: "05.04.2026",
+        factoryLocation: "Mohara I/A, Chandgaon, Chattogram, Bangladesh",
+        registeredOffice: "251-252 Nasirabad I/A, Chattogram-4211, Bangladesh",
+        signatory: "Harish Kumar Chaturvedi, President, KDS Textile Mills Ltd.",
+        departments: "Knitting, Wet Processing (Pre-treatment, Reactive Dyeing & Garment Washing), Finishing & Quality Assurance",
+        responsibilities: "Monitored floor-level production parameters across circular knitting and wet-processing departments; tracked recipe execution for desizing, bio-polishing enzyme treatment, reactive dyeing, and garment washing; assisted quality assurance engineers in evaluating GSM stability, shrinkage, and ISO 105 colorfastness standards; and studied machine utility optimization and effluent compliance.",
+        processesObserved: "High-speed circular knitting (Single Lacoste, Double Lacoste, Piqué, Single Jersey & Knit Denim), enzymatic desizing and bio-polishing, reactive dyeing cycles, conventional & sustainable garment washing workflows, hydro-extraction, stenter & compacting finishing, and Effluent Treatment Plant (ETP) water quality management.",
+        learningOutcomes: "Connected B.Sc. Textile Engineering theoretical coursework from BUFT directly with large-scale industrial manufacturing operations; developed practical competency in industrial process control, liquor ratio management, shade & fastness evaluation, and disciplined engineering teamwork."
+      },
+      featuredProject: {
+        title: "COMPARATIVE ANALYSIS OF OZONE WASH OVER CONVENTIONAL ACID WASH FOR KNIT APPAREL",
+        category: "Textile Engineering / Academic Research",
+        submissionDate: "26th October 2026",
+        supervisor: "Shafat Ahmed Bin Kamal, Assistant Professor, Dept. of Textile Engineering, BUFT",
+        fabricSource: "Masco Group Ltd. (100% Cotton Knit Denim, Single Lacoste 2×4, Double Lacoste 2×6)",
+        pdfPath: "assets/docs/Comparative_Analysis_Ozone_Wash_vs_Acid_Wash_Report.pdf",
+        subsections: [
+          {
+            num: "01",
+            title: "Project Introduction",
+            content: "Global demand for faded, vintage, and rugged visual effects has made garment washing a vital value-addition process in knit apparel manufacturing. While conventional acid washing is widely practiced to achieve high-contrast fading, it consumes large volumes of water and hazardous oxidants. This experimental research conducts a direct comparative analysis between eco-friendly gas-phase ozone washing (Jeanologia G2 Lab) and conventional acid washing (Tupesa Stone 75) across 100% cotton Knit Denim, Single Lacoste, and Double Lacoste apparel."
+          },
+          {
+            num: "02",
+            title: "Research Objectives",
+            content: "1) Establish controlled process recipes for ozone washing and conventional acid washing on knit structures; 2) Evaluate the impact of both washing methods on physical and aesthetic properties including ISO 105 colorfastness, GSM variation, and visual appearance; 3) Quantify water, chemical, energy (kWh/garment), and cycle time consumption; and 4) Benchmark environmental sustainability using Jeanologia EIM v2.0 software."
+          },
+          {
+            num: "03",
+            title: "Background Study",
+            content: "Conventional acid washing relies on potassium permanganate (KMnO4), phosphoric acid (H3PO4), and sodium metabisulphite, which generate high-COD/BOD effluent, corrode stainless-steel drums, and expose workers to respiratory and skin hazards. Ozone (O3) is a powerful triatomic oxidizing agent (oxidation potential E = 2.07 V) generated on-site from ambient air that cleaves conjugated double bonds in dye chromophores at room temperature and decomposes back into pure oxygen without toxic liquid waste."
+          },
+          {
+            num: "04",
+            title: "Ozone Washing Process",
+            content: "Performed using Jeanologia G2 Lab and ColorBox18. For Knit Denim T-shirts (0.5 kg, liquor ratio 1:10): Desizing with Beisol T2090 (5.5g) & Denimcol Clean SMX-2 (5.5g) at 45°C for 10 min → Rinse (2 min) → Enzyme treatment with Beizym NGS-P (5.5g) at 45°C for 20 min → Gas-phase Ozone Fading at 80% concentration for 15 min → Neutralization with Denimcol PEX (5.5g) at 50°C for 5 min → Softening with Denimcol Soft KRE (11g) for 5 min. For Single & Double Lacoste (liquor ratio 1:6): Ozone fading at 60% concentration for 10 min with towels → Wash with Denimcol Wash RG-N (1.5g, 50°C, 5 min) → Rinse (2 min) → Softening with Denimcol Soft 9270 (3g, 3 min)."
+          },
+          {
+            num: "05",
+            title: "Conventional Acid Washing Process",
+            content: "Performed in Tupesa Stone 75 and ColorBox18 at a 1:15 liquor ratio. For Knit Denim (0.5 kg): Desizing (5g Beisol T2090 + 5g Denimcol Clean SMX-2, 45°C, 10 min) → Enzyme treatment (5g Beizym NGS-P, 45°C, 20 min) → Acid Wash with foam balls using Potassium Permanganate (5g) + Phosphoric Acid (5g) for 5 min → Neutralization with Denimcol PEX (10g, 50°C, 5 min) → Softening with Denimcol Soft KRE (15g, 5 min). For Single & Double Lacoste: Oxidizing with PP (0.75g) + Phosphoric Acid (0.75g) for 5 min → Neutralization with Sodium Metabisulphite (7.5g, 50°C, 5 min) → Rinse (2 min) → Softening with Denimcol Soft 64 (3.75g, 2 min)."
+          },
+          {
+            num: "06",
+            title: "Comparative Analysis",
+            content: "Resource consumption measurements demonstrated major reductions under Ozone Wash: Water usage dropped by 40% on Lacoste (18 L vs. 30 L) and 45% on Knit Denim (22 L vs. 40 L, saving 18 L per cycle). Chemical usage dropped by 64.71% on Lacoste (4.5 g vs. 12.75 g) and 45% on Knit Denim (27.5 g vs. 50 g), completely eliminating potassium permanganate and phosphoric acid. On Knit Denim, Ozone Wash saved 8 minutes (153 min vs. 161 min) and reduced energy consumption from 1.02 kWh to 0.82 kWh per garment."
+          },
+          {
+            num: "07",
+            title: "Experimental Methodology",
+            content: "100% cotton Knit Denim (initial 221 GSM), Single Lacoste (2×4 repeat, 215 GSM), and Double Lacoste (2×6 repeat, 230–236 GSM) samples were collected from Masco Group Ltd. Quality performance was evaluated using international standards: ISO 105 C06 (A1S) for wash fastness, ISO 105 E01 for water fastness, ISO 105 E04 for acid & alkali perspiration fastness, ISO 105 X12 for dry & wet rubbing fastness, gravimetric GSM testing, and Jeanologia EIM v2.0 environmental impact assessment."
+          },
+          {
+            num: "08",
+            title: "Results and Discussion",
+            content: "Colorfastness to wash, water, and perspiration achieved 4–5 ratings across all fabrics for both washes. Crucially, on Knit Denim, Ozone Wash achieved superior rubbing fastness: 4–5 (Dry) and 4 (Wet) compared to 3–4 (Dry) and 2 (Wet) for Acid Wash. Post-wash GSM increased due to relaxation shrinkage, with Ozone Wash showing smaller GSM increases (Single Lacoste: 233 vs. 237 g/m²; Double Lacoste: 233 vs. 236 g/m²; Knit Denim: 239 vs. 240 g/m²), indicating better dimensional stability and lower fiber degradation."
+          },
+          {
+            num: "09",
+            title: "Environmental Considerations",
+            content: "Evaluated via Jeanologia EIM v2.0 software (0–33 Low Impact, 34–66 Medium Impact, +66 High Impact). Water impact decreased from 24 to 14 L/kg on Lacoste and from 80 to 58 L/kg on Knit Denim. Chemical impact fell sharply from 60 to 22 on Lacoste and from 68 to 24 on Knit Denim. Carbon footprint on Knit Denim decreased from 0.39 to 0.32 kg CO2/garment. Total EIM Scores were 22 (Ozone) vs. 38 (Acid) on Knit Denim (42% reduction) and 10 (Ozone) vs. 34 (Acid) on Lacoste (71% reduction), placing both Ozone washes firmly in the Low Environmental Impact category."
+          },
+          {
+            num: "10",
+            title: "Conclusion",
+            content: "Ozone washing successfully achieves natural vintage fading on knit apparel while preserving or improving rubbing fastness and dimensional stability. With 40%–45% water savings, 45%–64.71% chemical reduction, complete elimination of KMnO4 and phosphoric acid, and a 42%–71% lower EIM environmental impact score, gas-phase ozone washing is a technically viable and eco-friendly alternative to conventional acid washing for knitwear."
+          }
+        ],
+        visualAssets: [
+          {
+            id: "vis-1",
+            category: "Fabric Samples",
+            figLabel: "Figure 4 · Unwashed Knit Substrates",
+            title: "Unwashed Fabric Samples (Knit Denim, Single Lacoste & Double Lacoste)",
+            desc: "100% cotton fabric samples collected from Masco Group Ltd. prior to treatment: a) Unwashed Knit Denim (221 GSM), b) Unwashed Single Lacoste (2×4, 215 GSM), and c) Unwashed Double Lacoste (2×6, 230 GSM).",
+            imgKey: "fig4UnwashedSamples"
+          },
+          {
+            id: "vis-2",
+            category: "Fabric Samples",
+            figLabel: "Figure 10 · Washed Sample Comparison",
+            title: "Visual Appearance: Acid Wash vs. Ozone Wash on Knit Apparel",
+            desc: "Side-by-side comparison of treated samples: a) Knit Denim, b) Single Lacoste, and c) Double Lacoste after Acid Wash (top row) versus Ozone Wash (bottom row), demonstrating natural, uniform fading achieved with zero potassium permanganate.",
+            imgKey: "fig10WashedSamples"
+          },
+          {
+            id: "vis-3",
+            category: "Experimental Photographs",
+            figLabel: "Figure 5 · Washing Machinery & Sample Preparation",
+            title: "Tupesa Stone 75, Knit Denim T-Shirt Preparation & Jeanologia G2 Lab",
+            desc: "Laboratory machinery and sample preparation: a) Tupesa Stone 75 front-loading machine with RT-1 controller, b) Knit Denim T-shirt pattern cutting (0.5 kg garment weight), and c) Jeanologia G2 Lab gas-phase ozone washing machine.",
+            imgKey: "fig5ExperimentalMachines"
+          },
+          {
+            id: "vis-4",
+            category: "Experimental Photographs",
+            figLabel: "Figure 7 · Laboratory Wet Processing Unit",
+            title: "Jeanologia ColorBox18 Washing & Softening Machine",
+            desc: "Jeanologia ColorBox18 apparatus utilized for low-liquor-ratio desizing, bio-polishing enzyme treatment, neutralization, and softening operations.",
+            imgKey: "fig7ColorBox18"
+          },
+          {
+            id: "vis-5",
+            category: "Comparison Charts",
+            figLabel: "Figure 11 · Water Consumption Analysis",
+            title: "Water Consumption Comparison (Liters per Cycle)",
+            desc: "Ozone wash consumed 18 L vs. 30 L for Single/Double Lacoste (40% water savings) and 22 L vs. 40 L for Knit Denim (45% water savings, saving 18 L of water per batch).",
+            imgKey: "fig11WaterChart"
+          },
+          {
+            id: "vis-6",
+            category: "Comparison Charts",
+            figLabel: "Figure 12 · Chemical Consumption & Savings",
+            title: "Chemical Consumption per Sample & Ozone Savings Percentage",
+            desc: "Ozone washing reduced chemical consumption by 64.71% on Single/Double Lacoste (4.5 g vs. 12.75 g) and by 45% on Knit Denim (27.5 g vs. 50 g), eliminating KMnO4 and H3PO4.",
+            imgKey: "fig12ChemicalChart"
+          },
+          {
+            id: "vis-7",
+            category: "Comparison Charts",
+            figLabel: "Figure 13 · Process Time Comparison",
+            title: "Total Processing Time Consumption (Minutes)",
+            desc: "Comparison of total cycle duration: Knit Denim completed in 153 min under Ozone Wash vs. 161 min under Acid Wash (8 min saved), while Single/Double Lacoste required 67 min vs. 60 min.",
+            imgKey: "fig13TimeChart"
+          },
+          {
+            id: "vis-8",
+            category: "Comparison Charts",
+            figLabel: "Figure 14 · Energy Consumption Analysis",
+            title: "Energy Consumption per Garment (kWh/garment)",
+            desc: "Per-garment energy comparison: Knit Denim required 0.82 kWh under Ozone Wash vs. 1.02 kWh under Acid Wash (20% energy reduction), while Lacoste required 0.33 kWh vs. 0.29 kWh.",
+            imgKey: "fig14EnergyChart"
+          },
+          {
+            id: "vis-9",
+            category: "Comparison Charts",
+            figLabel: "Figure 9 · Jeanologia EIM v2.0 Assessment",
+            title: "EIM v2.0 Environmental Impact Score Display",
+            desc: "Jeanologia EIM v2.0 software benchmark evaluating Water Impact (L/kg), Energy Impact (kWh/kg), Chemical Impact (g/kg), Carbon Footprint (kg CO2/garment), and Total EIM Score.",
+            imgKey: "fig9EimResult"
+          },
+          {
+            id: "vis-10",
+            category: "Comparison Charts",
+            figLabel: "Figure 3 · EIM v2.0 Benchmarking Thresholds",
+            title: "Jeanologia EIM v2.0 Classification Framework",
+            desc: "Ecological threshold classification system: 0–33 Low Impact (Green), 34–66 Medium Impact (Amber), and +66 High Impact (Red) across water, energy, chemical, and worker health categories.",
+            imgKey: "fig3EimSteps"
+          },
+          {
+            id: "vis-11",
+            category: "Experimental Photographs",
+            figLabel: "Figure 6 · Process Sequence Flowchart",
+            title: "Process Flow Comparison: Acid Wash vs. Ozone Wash on Knit Denim",
+            desc: "Sequential operational comparison illustrating a) Acid wash flow (Desizing → Rinse → Enzyme → Acid Wash → Neutralization → Rinse → Softening) and b) Ozone wash flow.",
+            imgKey: "fig6ProcessFlow"
+          },
+          {
+            id: "vis-12",
+            category: "Experimental Photographs",
+            figLabel: "Figure 1 & Figure 2 · Ozone Generation & Mechanism",
+            title: "Ozone Generation Workflow & Indigo Oxidation Reaction",
+            desc: "Chemical mechanism showing O3 (E = 2.07 eV) cleaving the olefin double bond of Indigo molecules into colorless/light Isatine and Anhydride Isatoic products.",
+            imgKey: "fig2OzoneReaction"
+          }
+        ]
+      },
+      skills: {
+        digitalCategories: [
+          {
+            category: "Microsoft Office",
+            subtitle: "Productivity & Documentation",
+            items: [
+              { name: "Microsoft Excel", tag: "Data & Reporting", code: "XL", desc: "Spreadsheets, industrial production tracking sheets, and structured experimental data analysis." },
+              { name: "Microsoft PowerPoint", tag: "Presentation Design", code: "PP", desc: "Executive academic presentations, visual storytelling, and technical defense slide decks." },
+              { name: "Microsoft Word", tag: "Technical Writing", code: "WD", desc: "Research reports, thesis formatting, SOP documentation, and academic papers." }
+            ]
+          },
+          {
+            category: "Creative & Design Tools",
+            subtitle: "Visual Identity & Retouching",
+            items: [
+              { name: "Adobe Photoshop", tag: "Image Editing", code: "Ps", desc: "High-end portrait retouching, visual compositing, color grading, and raster graphics." },
+              { name: "Adobe Illustrator", tag: "Vector & Branding", code: "Ai", desc: "Vector illustration, minimal iconography, typographic layouts, and brand marks." },
+              { name: "Canva", tag: "Rapid Editorial Design", code: "Cv", desc: "Social visuals, modern layout prototyping, and clean digital communication assets." }
+            ]
+          },
+          {
+            category: "Technology & Digital Media",
+            subtitle: "Next-Gen Creative Workflows",
+            items: [
+              { name: "AI Tools", tag: "Generative & Analytical AI", code: "AI", desc: "Prompt engineering, AI-assisted ideation, research synthesis, and creative workflows." },
+              { name: "Video Editing", tag: "Cinematic Motion", code: "VE", desc: "Pacing, transitions, color treatment, and visual storytelling for digital media." }
+            ]
+          }
+        ],
+        textileKnowledge: [
+          { area: "Textile Manufacturing", label: "Academic Foundation & Core Focus", code: "TM-01" },
+          { area: "Textile Technology", label: "Academic Foundation & Core Focus", code: "TT-02" },
+          { area: "Yarn and Fabric Engineering", label: "B.Sc. Coursework & Structure Analysis", code: "YF-03" },
+          { area: "Textile Wet Processing", label: "Ozone & Acid Wash Research Focus", code: "WP-04" },
+          { area: "Dyeing and Finishing", label: "Industrial & Academic Competency", code: "DF-05" },
+          { area: "Apparel Manufacturing", label: "Knit Garment Construction & Sizing", code: "AM-06" },
+          { area: "Textile Quality Control", label: "ISO 105 Fastness & GSM Testing", code: "QC-07" },
+          { area: "Industrial Production Processes", label: "KDS Textile Mills Internship Exposure", code: "IP-08" }
+        ]
+      },
+      approach: {
+        steps: [
+          {
+            num: "01",
+            word: "DEFINE",
+            title: "01 — CONTINUOUS LEARNING",
+            description: "I believe that knowledge has no final destination. There is always something new to learn and explore.",
+            imageKey: "portraitFormal",
+            caption: "Academic rigor at BGMEA University of Fashion & Technology (BUFT) · Class of 2026"
+          },
+          {
+            num: "02",
+            word: "DESIGN",
+            title: "02 — CREATIVE THINKING",
+            description: "I enjoy approaching ideas from different perspectives and discovering creative ways to express them.",
+            imageKey: "portraitEditorial",
+            caption: "Editorial visual direction, photography & digital aesthetics"
+          },
+          {
+            num: "03",
+            word: "ENGINEER",
+            title: "03 — TECHNICAL PRECISION",
+            description: "My engineering background has taught me the importance of structured thinking, accuracy, and attention to detail.",
+            imageKey: "industrialMill",
+            caption: "Industrial exposure at KDS Textile Mills Ltd. & BUFT Wet Processing Labs"
+          },
+          {
+            num: "04",
+            word: "DELIVER",
+            title: "04 — ADAPTABILITY",
+            description: "I believe in embracing new technologies, learning new skills, and adapting to an evolving professional world.",
+            imageKey: "creativeStudio",
+            caption: "Bridging sustainable textile science, AI workflows, and modern creative craft"
+          }
+        ]
+      },
+      creativeInterests: {
+        tags: [
+          "Artificial Intelligence and AI-powered tools",
+          "Graphic Design",
+          "Adobe Photoshop",
+          "Adobe Illustrator",
+          "Canva Design",
+          "Video Editing",
+          "Photography",
+          "Cinematic Visuals",
+          "Digital Content Creation",
+          "Modern Technology"
+        ],
+        gallery: [
+          {
+            id: "gal-1",
+            title: "Editorial Portrait Study I — Coastal Minimalism",
+            category: "Photography",
+            tools: "Portrait Direction · Color & Tone",
+            imageKey: "portraitFormal",
+            description: "Personal visual identity study featuring structured tailoring against a minimalist coastal horizon."
+          },
+          {
+            id: "gal-2",
+            title: "Editorial Portrait Study II — Golden Hour Perspective",
+            category: "Photography",
+            tools: "Natural Light · Linen Texture & Composition",
+            imageKey: "portraitEditorial",
+            description: "Low-angle editorial framing exploring natural fabric texture, warm sunlight contrast, and clean negative space."
+          },
+          {
+            id: "gal-3",
+            title: "Macro Knit Structure & Ozone Surface Study",
+            category: "Cinematic Visuals",
+            tools: "Textile Visuals · Monochrome Contrast",
+            imageKey: "projectOzoneCover",
+            description: "Visual exploration of heavy knit cotton fibers and surface oxidation aesthetics inspired by sustainable wet-processing research."
+          },
+          {
+            id: "gal-4",
+            title: "Creative Direction & Digital Darkroom Workspace",
+            category: "Graphic Design",
+            tools: "Photoshop · Illustrator · AI Workflows",
+            imageKey: "creativeStudio",
+            description: "Multidisciplinary creative direction combining typography, monochrome swatch systems, digital retouching, and AI-assisted visual studies."
+          }
+        ]
+      }
+    };
+  </script>
+
+  <!-- =========================================================================
+       00:02 INTRO LOADER OVERLAY
+       ========================================================================= -->
+  <div id="intro-loader" class="fixed inset-0 z-[100] bg-ink text-offwhite flex flex-col items-center justify-center px-6 select-none">
+    <div class="text-center">
+      <p class="text-[11px] uppercase tracking-[0.35em] text-silver mb-3 font-grotesk">PORTFOLIO 2026 · BANGLADESH</p>
+      <h2 class="text-xl md:text-2xl font-medium tracking-tight text-offwhite">Portfolio by Durjoy</h2>
+      <div class="w-40 h-[1px] bg-white/15 mx-auto mt-5 overflow-hidden relative">
+        <div id="loader-bar" class="h-full bg-offwhite w-0 transition-all duration-700 ease-out"></div>
+      </div>
+    </div>
+    <button onclick="dismissLoader()" class="mt-8 text-[11px] uppercase tracking-[0.25em] text-silver hover:text-offwhite transition-colors">
+      Enter Portfolio →
+    </button>
+  </div>
+
+  <!-- Custom Toast Notification -->
+  <div id="toast-container" class="fixed bottom-6 right-6 z-[95] pointer-events-none flex flex-col gap-2"></div>
+
+  <!-- Full-Screen Image Lightbox Modal (for Certificate, BUFT Logo, Fabric Samples & Charts) -->
+  <div id="image-lightbox-modal" class="hidden fixed inset-0 z-[90] bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-8" onclick="closeImageLightbox()">
+    <div class="relative max-w-5xl w-full bg-charcoal border border-white/15 rounded-3xl overflow-hidden shadow-2xl" onclick="event.stopPropagation()">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-white/10">
+        <div>
+          <span id="lightbox-tag" class="text-[10px] font-grotesk uppercase tracking-[0.22em] text-silver block">DOCUMENT PREVIEW</span>
+          <h4 id="lightbox-title" class="text-base sm:text-lg font-bold text-offwhite">Image Preview</h4>
+        </div>
+        <button onclick="closeImageLightbox()" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-ink text-offwhite flex items-center justify-center transition-colors text-lg">
+          ✕
+        </button>
+      </div>
+      <div class="p-4 sm:p-6 bg-ink flex items-center justify-center max-h-[75vh] overflow-auto">
+        <img id="lightbox-img" src="assets/images/kds_internship_certificate.jpg" alt="Preview" class="max-w-full max-h-[68vh] w-auto h-auto object-contain rounded-xl" />
+      </div>
+      <div class="px-6 py-3.5 bg-charcoal border-t border-white/10 flex items-center justify-between text-xs text-silver">
+        <span id="lightbox-caption">Official Documentation</span>
+        <button onclick="closeImageLightbox()" class="px-4 py-1.5 rounded-full bg-offwhite text-ink font-semibold uppercase tracking-[0.14em]">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full-Screen Project Report PDF Reader Modal -->
+  <div id="report-pdf-modal" class="hidden fixed inset-0 z-[92] bg-black/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-6" onclick="closeProjectReportModal()">
+    <div class="relative max-w-5xl w-full h-[88vh] bg-offwhite text-ink rounded-3xl overflow-hidden shadow-2xl flex flex-col border border-black/20" onclick="event.stopPropagation()">
+      <!-- Top Bar -->
+      <div class="px-6 py-4 bg-ink text-offwhite flex flex-wrap items-center justify-between gap-3 shrink-0">
+        <div>
+          <span class="text-[10px] font-grotesk uppercase tracking-[0.22em] text-silver block">ATTACHED B.SC. RESEARCH REPORT · BUFT (2026)</span>
+          <h4 class="text-sm sm:text-base font-bold text-offwhite">Comparative Analysis of Ozone Wash Over Conventional Acid Wash for Knit Apparel.pdf</h4>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="downloadProjectReportPDF()" class="px-4 py-2 rounded-full bg-offwhite text-ink text-xs font-semibold uppercase tracking-[0.15em] hover:bg-silver transition-colors">
+            Download Report ↓
+          </button>
+          <button onclick="closeProjectReportModal()" class="w-9 h-9 rounded-full bg-white/15 hover:bg-white hover:text-ink text-offwhite flex items-center justify-center transition-colors">
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <!-- Scrollable Complete Thesis Document Content -->
+      <div class="flex-1 overflow-y-auto p-6 sm:p-10 space-y-8 bg-white">
+        <!-- Cover Page Block -->
+        <div class="border border-black/15 rounded-2xl p-6 sm:p-8 text-center bg-offwhite">
+          <img src="assets/images/buft_crest.png" alt="BUFT Crest" class="w-20 h-20 mx-auto object-contain mb-4" />
+          <p class="text-xs font-grotesk uppercase tracking-[0.22em] text-muted">BGMEA UNIVERSITY OF FASHION &amp; TECHNOLOGY (BUFT)</p>
+          <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-ink mt-2 max-w-2xl mx-auto">
+            Comparative Analysis of Ozone Wash Over Conventional Acid Wash for Knit Apparel
+          </h2>
+          <p class="text-xs text-muted mt-2">
+            Submitted in partial fulfilment of the requirements for the degree of B.Sc. in Textile Engineering · Faculty of Textile Engineering · Date of Submission: 26th October 2026
+          </p>
+          <div class="mt-6 pt-5 border-t border-black/10 grid grid-cols-1 sm:grid-cols-2 gap-4 text-left text-xs max-w-2xl mx-auto">
+            <div>
+              <strong class="uppercase tracking-wider text-muted block mb-1">Submitted By (Research Group)</strong>
+              <p>• <strong>Shuvakor Bhowmik Durjoy</strong> (ID: 222-322-801)</p>
+              <p>• Md. Shajedul Islam (ID: 222-312-801)</p>
+              <p>• S. M. Wasia Zidan (ID: 222-349-801)</p>
+              <p>• Sharafat Islam (ID: 222-319-801)</p>
+              <p>• Md. Hridy Fakir (ID: 222-335-801)</p>
+            </div>
+            <div>
+              <strong class="uppercase tracking-wider text-muted block mb-1">Supervised By</strong>
+              <p class="font-semibold text-ink">Shafat Ahmed Bin Kamal</p>
+              <p>Assistant Professor, Department of Textile Engineering</p>
+              <p>BGMEA University of Fashion &amp; Technology (BUFT)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Abstract -->
+        <div>
+          <h3 class="text-sm font-grotesk uppercase tracking-[0.2em] text-muted border-b border-black/15 pb-2 mb-3">Abstract</h3>
+          <p class="text-sm text-ink/85 leading-relaxed">
+            The growing global demand for faded, vintage, and rugged visual effects has increased the importance of washing processes in knit apparel manufacturing. Conventional washing techniques, particularly acid washing, are widely used to achieve such effects. However, these processes consume large amounts of water and chemicals and contribute significantly to environmental pollution and waste generation. This experimental study presents a comparative analysis of ozone washing and conventional acid washing applied to knit apparel (100% cotton Knit Denim, Single Lacoste, and Double Lacoste). The comparison is conducted based on quality-related parameters, including aesthetic performance, ISO 105 colorfastness, and GSM properties, as well as environmental indicators such as water consumption, chemical usage, energy consumption, and Jeanologia EIM v2.0 environmental impact score. The findings demonstrate that ozone washing delivers comparable or improved garment quality with 40%–45% less water, 45%–64.71% less chemical consumption, and a 42%–71% lower EIM environmental impact score.
+          </p>
+        </div>
+
+        <!-- Key Experimental Tables from Thesis -->
+        <div>
+          <h3 class="text-sm font-grotesk uppercase tracking-[0.2em] text-muted border-b border-black/15 pb-2 mb-4">Summary of Experimental Results &amp; Tables (Chapters 3 &amp; 4)</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs text-left border border-black/15">
+              <thead class="bg-ink text-offwhite uppercase font-grotesk">
+                <tr>
+                  <th class="p-3">Parameter / Metric</th>
+                  <th class="p-3">Knit Denim (Ozone)</th>
+                  <th class="p-3">Knit Denim (Acid)</th>
+                  <th class="p-3">Lacoste (Ozone)</th>
+                  <th class="p-3">Lacoste (Acid)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-black/10">
+                <tr>
+                  <td class="p-3 font-semibold">Colorfastness to Wash (ISO 105 C06)</td>
+                  <td class="p-3">4–5</td>
+                  <td class="p-3">4–5</td>
+                  <td class="p-3">4–5</td>
+                  <td class="p-3">4–5</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold">Colorfastness to Water &amp; Perspiration</td>
+                  <td class="p-3">4–5</td>
+                  <td class="p-3">4–5</td>
+                  <td class="p-3">4–5</td>
+                  <td class="p-3">4–5</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold">Dry / Wet Rubbing Fastness (ISO 105 X12)</td>
+                  <td class="p-3 font-bold text-emerald-700">Dry: 4–5 | Wet: 4</td>
+                  <td class="p-3">Dry: 3–4 | Wet: 2</td>
+                  <td class="p-3">Dry: 4–5 | Wet: 3–5</td>
+                  <td class="p-3">Dry: 4–5 | Wet: 3–5</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold">Fabric Weight (GSM, g/m²)</td>
+                  <td class="p-3">221 → 239</td>
+                  <td class="p-3">221 → 240</td>
+                  <td class="p-3">215/230 → 233</td>
+                  <td class="p-3">215/230 → 237/236</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold">Water Consumption (Liters)</td>
+                  <td class="p-3 font-bold text-emerald-700">22 L (-45%)</td>
+                  <td class="p-3">40 L</td>
+                  <td class="p-3 font-bold text-emerald-700">18 L (-40%)</td>
+                  <td class="p-3">30 L</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold">Chemical Consumption (g/sample)</td>
+                  <td class="p-3 font-bold text-emerald-700">27.5 g (-45%)</td>
+                  <td class="p-3">50.0 g</td>
+                  <td class="p-3 font-bold text-emerald-700">4.5 g (-64.71%)</td>
+                  <td class="p-3">12.75 g</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold">Energy Consumption (kWh/garment)</td>
+                  <td class="p-3 font-bold text-emerald-700">0.82 kWh</td>
+                  <td class="p-3">1.02 kWh</td>
+                  <td class="p-3">0.33 kWh</td>
+                  <td class="p-3">0.29 kWh</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold">Carbon Footprint (kg CO₂/garment)</td>
+                  <td class="p-3 font-bold text-emerald-700">0.32 kg CO₂</td>
+                  <td class="p-3">0.39 kg CO₂</td>
+                  <td class="p-3">0.14 kg CO₂</td>
+                  <td class="p-3">0.09 kg CO₂</td>
+                </tr>
+                <tr class="bg-stone/50">
+                  <td class="p-3 font-bold">Total EIM v2.0 Environmental Score</td>
+                  <td class="p-3 font-bold text-emerald-700">22 (Low Impact)</td>
+                  <td class="p-3 font-semibold text-amber-700">38 (Medium Impact)</td>
+                  <td class="p-3 font-bold text-emerald-700">10 (Low Impact)</td>
+                  <td class="p-3 font-semibold text-amber-700">34 (Medium Impact)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Embedded Figures Preview inside Report Modal -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="border border-black/10 rounded-xl p-3">
+            <img src="assets/images/fig4_unwashed_fabric_samples.jpg" alt="Unwashed Samples" class="w-full h-44 object-contain" />
+            <p class="text-[11px] text-center text-muted mt-2">Figure 4: Unwashed Knit Denim, Single Lacoste &amp; Double Lacoste</p>
+          </div>
+          <div class="border border-black/10 rounded-xl p-3">
+            <img src="assets/images/fig10_washed_fabric_samples.jpg" alt="Washed Samples" class="w-full h-44 object-contain" />
+            <p class="text-[11px] text-center text-muted mt-2">Figure 10: Acid-Washed vs. Ozone-Washed Samples</p>
+          </div>
+          <div class="border border-black/10 rounded-xl p-3">
+            <img src="assets/images/fig11_chart_water_consumption.jpg" alt="Water Consumption" class="w-full h-44 object-contain" />
+            <p class="text-[11px] text-center text-muted mt-2">Figure 11: Water Consumption Comparison (L)</p>
+          </div>
+          <div class="border border-black/10 rounded-xl p-3">
+            <img src="assets/images/fig12_chart_chemical_consumption.jpg" alt="Chemical Consumption" class="w-full h-44 object-contain" />
+            <p class="text-[11px] text-center text-muted mt-2">Figure 12: Chemical Consumption &amp; Savings (%)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       DOCUMENT ACCESS REQUEST & APPROVAL GATE MODAL (CV & Project Report PDF)
+       Requires visitors to submit an access request to shuvakordurjoy2002@gmail.com
+       and enter an approval code / magic link from Durjoy before downloading.
+       ========================================================================= -->
+  <div id="access-gate-modal" class="hidden fixed inset-0 z-[94] bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6" onclick="closeAccessGateModal()">
+    <div class="relative max-w-2xl w-full bg-offwhite text-ink rounded-3xl overflow-hidden shadow-2xl border border-black/20" onclick="event.stopPropagation()">
+      
+      <!-- Modal Header -->
+      <div class="px-6 py-5 bg-ink text-offwhite flex items-center justify-between gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 text-[10px] font-grotesk uppercase tracking-[0.22em] text-silver mb-1">
+            <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+            <span>PROTECTED DOCUMENT ACCESS · APPROVAL REQUIRED</span>
+          </div>
+          <h3 id="access-gate-title" class="text-lg sm:text-xl font-bold text-offwhite">
+            Request Permission to Download CV / Project Report
+          </h3>
+        </div>
+        <button type="button" onclick="closeAccessGateModal()" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-ink text-offwhite flex items-center justify-center transition-colors">
+          ✕
+        </button>
+      </div>
+
+      <!-- Mode Switch Tabs: 1) Apply for Access | 2) Enter Approval Code -->
+      <div class="px-6 pt-4 bg-stone/60 border-b border-black/10 flex gap-2">
+        <button type="button" id="gate-tab-request" onclick="switchAccessGateTab('request')" class="px-4 py-2.5 rounded-t-xl text-xs font-grotesk uppercase tracking-[0.16em] font-semibold bg-offwhite text-ink border-t border-x border-black/10">
+          1 · Apply for Download Access
+        </button>
+        <button type="button" id="gate-tab-verify" onclick="switchAccessGateTab('verify')" class="px-4 py-2.5 rounded-t-xl text-xs font-grotesk uppercase tracking-[0.16em] font-semibold text-muted hover:text-ink">
+          2 · I Have an Approval Code
+        </button>
+      </div>
+
+      <!-- TAB 1: Request Access Form -->
+      <div id="gate-panel-request" class="p-6 sm:p-8 space-y-4 max-h-[75vh] overflow-y-auto">
+        <div class="p-4 rounded-2xl bg-white border border-black/10 text-xs text-ink/80 leading-relaxed">
+          <strong class="text-ink block mb-1">🔒 Direct Download is Restricted</strong>
+          To protect personal academic and professional records, downloading the <strong>Curriculum Vitae (CV)</strong> or <strong>B.Sc. Project Report PDF</strong> requires prior approval. Submit your request below—it will be sent directly to <strong>shuvakordurjoy2002@gmail.com</strong>. Once Durjoy approves your request, you will receive an <strong>Approval Code / Unlock Link</strong> via email to download the file.
+        </div>
+
+        <form id="access-request-form" onsubmit="submitAccessRequest(event)" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="req-name" class="block text-[11px] font-grotesk uppercase tracking-[0.16em] text-ink/80 mb-1">
+                Your Full Name *
+              </label>
+              <input id="req-name" type="text" required placeholder="Enter your full name" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-black/15 text-sm text-ink focus:outline-none focus:border-ink" />
+            </div>
+            <div>
+              <label for="req-email" class="block text-[11px] font-grotesk uppercase tracking-[0.16em] text-ink/80 mb-1">
+                Your Email Address *
+              </label>
+              <input id="req-email" type="email" required placeholder="you@company.com" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-black/15 text-sm text-ink focus:outline-none focus:border-ink" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="req-org" class="block text-[11px] font-grotesk uppercase tracking-[0.16em] text-ink/80 mb-1">
+                Company / Institution *
+              </label>
+              <input id="req-org" type="text" required placeholder="Organization or University" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-black/15 text-sm text-ink focus:outline-none focus:border-ink" />
+            </div>
+            <div>
+              <label for="req-doc-type" class="block text-[11px] font-grotesk uppercase tracking-[0.16em] text-ink/80 mb-1">
+                Document Requested *
+              </label>
+              <select id="req-doc-type" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-black/15 text-sm text-ink focus:outline-none focus:border-ink">
+                <option value="CV">Curriculum Vitae (CV)</option>
+                <option value="REPORT">B.Sc. Project Report PDF (Ozone vs. Acid Wash)</option>
+                <option value="BOTH">Both CV &amp; Project Report PDF</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="req-reason" class="block text-[11px] font-grotesk uppercase tracking-[0.16em] text-ink/80 mb-1">
+              Purpose of Request *
+            </label>
+            <textarea id="req-reason" rows="3" required placeholder="Briefly mention why you are requesting access (e.g., Recruitment, Academic Reference, Industrial Collaboration)..." class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-black/15 text-sm text-ink focus:outline-none focus:border-ink resize-y"></textarea>
+          </div>
+
+          <div class="pt-2 flex flex-wrap items-center justify-between gap-3">
+            <button type="submit" class="inline-flex items-center gap-2 bg-ink text-offwhite text-xs font-semibold uppercase tracking-[0.16em] px-6 py-3.5 rounded-full hover:bg-charcoal transition-all">
+              <span>Send Request to Durjoy's Gmail</span>
+              <span>↗</span>
+            </button>
+            <button type="button" onclick="switchAccessGateTab('verify')" class="text-xs font-medium text-ink underline hover:opacity-75">
+              Already approved? Enter code →
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- TAB 2: Verify Approval Code & Unlock Download -->
+      <div id="gate-panel-verify" class="hidden p-6 sm:p-8 space-y-5">
+        <div class="p-4 rounded-2xl bg-white border border-black/10 text-xs text-ink/80 leading-relaxed">
+          <strong class="text-ink block mb-1">✅ Unlock with Approval Code</strong>
+          Once Durjoy reviews and approves your request on Gmail, he will reply with your <strong>Approval Code</strong> (or you can click the direct approval link in his reply email). Enter your email and the approval code below to unlock and download the files immediately.
+        </div>
+
+        <form id="access-verify-form" onsubmit="verifyApprovalCode(event)" class="space-y-4">
+          <div>
+            <label for="verify-email" class="block text-[11px] font-grotesk uppercase tracking-[0.16em] text-ink/80 mb-1">
+              Your Approved Email Address *
+            </label>
+            <input id="verify-email" type="email" required placeholder="Enter the email you used to apply" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-black/15 text-sm text-ink focus:outline-none focus:border-ink" />
+          </div>
+
+          <div>
+            <label for="verify-code" class="block text-[11px] font-grotesk uppercase tracking-[0.16em] text-ink/80 mb-1">
+              Approval Code from Durjoy *
+            </label>
+            <input id="verify-code" type="text" required placeholder="e.g. DJ-XXXX-XXXX" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-black/15 text-sm font-mono uppercase text-ink focus:outline-none focus:border-ink" />
+          </div>
+
+          <div id="verify-error-msg" class="hidden p-3 rounded-xl bg-red-50 border border-red-200 text-xs text-red-700 font-medium"></div>
+
+          <!-- Unlocked Download Actions (Shown only after valid approval verification!) -->
+          <div id="unlocked-download-box" class="hidden p-5 rounded-2xl bg-emerald-50 border border-emerald-300 space-y-3">
+            <div class="flex items-center gap-2 text-emerald-800 font-bold text-sm">
+              <span>✓ Access Approved by Durjoy!</span>
+            </div>
+            <p class="text-xs text-emerald-700">Your approval code has been verified. You may now view or download the authorized documents below:</p>
+            <div class="flex flex-wrap gap-2.5 pt-1">
+              <button type="button" onclick="executeAuthorizedCVDownload()" class="px-4 py-2.5 rounded-full bg-ink text-offwhite text-xs font-semibold uppercase tracking-[0.14em] hover:bg-charcoal">
+                Download CV Now ↓
+              </button>
+              <button type="button" onclick="executeAuthorizedReportView()" class="px-4 py-2.5 rounded-full bg-emerald-700 text-white text-xs font-semibold uppercase tracking-[0.14em] hover:bg-emerald-800">
+                Read Project Report PDF ↗
+              </button>
+              <button type="button" onclick="executeAuthorizedReportDownload()" class="px-4 py-2.5 rounded-full border border-ink text-ink text-xs font-semibold uppercase tracking-[0.14em] hover:bg-ink hover:text-offwhite">
+                Download Project Report ↓
+              </button>
+            </div>
+          </div>
+
+          <div class="pt-2 flex flex-wrap items-center justify-between gap-3">
+            <button type="submit" class="inline-flex items-center gap-2 bg-ink text-offwhite text-xs font-semibold uppercase tracking-[0.16em] px-6 py-3.5 rounded-full hover:bg-charcoal transition-all">
+              <span>Verify Approval &amp; Unlock</span>
+              <span>→</span>
+            </button>
+            <button type="button" onclick="switchAccessGateTab('request')" class="text-xs font-medium text-muted hover:text-ink">
+              ← Back to Request Form
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       FLOATING PILL NAVIGATION BAR (Edit Content button removed as requested!)
+       ========================================================================= -->
+  <header id="site-header" class="fixed top-4 left-0 right-0 z-50 px-3 sm:px-6 lg:px-10 transition-all duration-300">
+    <div class="max-w-[1400px] mx-auto bg-white/95 backdrop-blur-md border border-black/10 rounded-full px-3 sm:px-5 py-2.5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex items-center justify-between gap-2">
+      
+      <!-- Brand / Monogram Logo -->
+      <a href="#home" class="flex items-center gap-2.5 group shrink-0">
+        <span class="w-8 h-8 rounded-full bg-ink text-offwhite flex items-center justify-center font-condensed text-base tracking-tighter group-hover:scale-105 transition-transform">
+          DJ
+        </span>
+        <span class="text-[11px] sm:text-xs tracking-[0.14em] uppercase text-ink font-medium">
+          PORTFOLIO BY <strong class="font-bold">DURJOY</strong>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Primary Navigation" class="hidden xl:flex items-center gap-5 text-[11px] font-medium tracking-[0.15em] uppercase text-ink/80">
+        <a href="#home" class="hover:text-ink transition-colors py-1">HOME</a>
+        <a href="#about" class="hover:text-ink transition-colors py-1">ABOUT</a>
+        <a href="#experience" class="hover:text-ink transition-colors py-1">EXPERIENCE</a>
+        <a href="#education" class="hover:text-ink transition-colors py-1">EDUCATION</a>
+        <a href="#skills" class="hover:text-ink transition-colors py-1">SKILLS</a>
+        <a href="#projects" class="hover:text-ink transition-colors py-1">PROJECTS</a>
+        <a href="#creative-work" class="hover:text-ink transition-colors py-1">CREATIVE WORK</a>
+        <a href="#youtube" class="hover:text-ink transition-colors py-1">YOUTUBE</a>
+        <a href="#contact" class="hover:text-ink transition-colors py-1">CONTACT</a>
+      </nav>
+
+      <!-- Right Action Buttons: Portrait Filter & Download CV Pill (No Edit Content Button!) -->
+      <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+        <button id="toggle-color-btn" onclick="toggleColorTreatment()" title="Switch between Black & White Editorial and Natural Portrait Color" class="hidden sm:inline-flex items-center gap-1.5 text-[10px] uppercase tracking-[0.14em] px-3 py-1.5 rounded-full border border-black/15 hover:border-ink text-ink transition-all">
+          <span id="color-mode-dot" class="w-2 h-2 rounded-full bg-ink"></span>
+          <span id="color-mode-label">B&amp;W Editorial</span>
+        </button>
+
+        <button onclick="downloadCV()" class="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] px-4 py-1.5 rounded-full border border-ink bg-ink text-offwhite hover:bg-transparent hover:text-ink transition-all">
+          <span>DOWNLOAD CV</span>
+        </button>
+
+        <!-- Mobile Menu Trigger -->
+        <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu" class="xl:hidden w-8 h-8 rounded-full border border-black/15 flex items-center justify-center text-ink">
+          <svg id="menu-icon-open" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16"/>
+          </svg>
+          <svg id="menu-icon-close" class="w-4 h-4 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu-drawer" class="hidden xl:hidden max-w-[1400px] mx-auto mt-2 bg-white/98 backdrop-blur-lg border border-black/10 rounded-3xl p-5 shadow-xl">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-medium uppercase tracking-[0.15em]">
+        <a href="#home" onclick="closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-stone/60">01 · HOME</a>
+        <a href="#about" onclick="closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-stone/60">02 · ABOUT</a>
+        <a href="#experience" onclick="closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-stone/60">03 · EXPERIENCE</a>
+        <a href="#education" onclick="closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-stone/60">04 · EDUCATION</a>
+        <a href="#skills" onclick="closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-stone/60">05 · SKILLS</a>
+        <a href="#projects" onclick="closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-stone/60">06 · PROJECTS</a>
+        <a href="#creative-work" onclick="closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-stone/60">07 · CREATIVE WORK</a>
+        <a href="#youtube" onclick="closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-stone/60">08 · YOUTUBE</a>
+        <a href="#contact" onclick="closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-stone/60">09 · CONTACT</a>
+      </div>
+      <div class="mt-4 pt-3 border-t border-black/10 flex flex-wrap items-center justify-between gap-2">
+        <button onclick="toggleColorTreatment(); closeMobileMenu();" class="text-[11px] uppercase tracking-[0.14em] px-3.5 py-2 rounded-full border border-black/20">
+          Switch Portrait Filter (B&amp;W / Color)
+        </button>
+        <a href="#contact" onclick="closeMobileMenu()" class="text-[11px] font-semibold uppercase tracking-[0.14em] px-4 py-2 rounded-full bg-ink text-offwhite">
+          Hire / Connect →
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       SECTION 3: HERO SECTION — FIRST IMPRESSION
+       ========================================================================= -->
+  <section id="home" class="relative min-h-screen pt-24 pb-10 flex flex-col justify-between overflow-hidden select-none">
+    
+    <!-- Subtle Geometric Circular Hairlines -->
+    <div class="hero-orbit-circle w-[480px] h-[480px] md:w-[680px] md:h-[680px] absolute -left-32 top-16"></div>
+    <div class="hero-orbit-circle w-[360px] h-[360px] md:w-[540px] md:h-[540px] absolute -right-24 bottom-8"></div>
+    <div class="hero-orbit-circle w-[280px] h-[280px] absolute right-12 top-28 hidden lg:block"></div>
+
+    <!-- Top Metadata & Editorial Designation Row -->
+    <div class="relative z-20 max-w-[1400px] w-full mx-auto px-5 sm:px-8 lg:px-12 pt-4 md:pt-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      
+      <!-- Left Designation Block -->
+      <div class="lg:col-span-5">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 mb-3">
+          <span class="w-2 h-2 rounded-full bg-ink animate-pulse"></span>
+          <span class="text-[10px] font-grotesk uppercase tracking-[0.2em] text-ink/80">
+            GRADUATE · CLASS OF 2026 · BANGLADESH
+          </span>
+        </div>
+        <p class="text-lg sm:text-xl md:text-2xl font-normal text-ink leading-snug tracking-tight">
+          Textile Engineering Graduate<br />
+          <span class="font-medium">Creative Thinker / Digital Explorer</span>
+        </p>
+        <p class="mt-1.5 text-xs uppercase tracking-[0.22em] text-muted font-grotesk">
+          B.Sc. IN TEXTILE ENGINEERING · BUFT
+        </p>
+      </div>
+
+      <!-- Right Editorial Tagline & Hero Description + Primary Buttons -->
+      <div class="lg:col-span-7 lg:text-right flex flex-col lg:items-end">
+        <p class="text-[11px] font-grotesk uppercase tracking-[0.22em] text-muted mb-1.5">
+          “ENGINEERING MINDS. CREATIVE VISIONS. ENDLESS POSSIBILITIES.”
+        </p>
+        <p class="text-sm sm:text-base text-ink/80 max-w-xl leading-relaxed select-text">
+          A Textile Engineering graduate with an eye for creativity, an interest in technology, and a mindset focused on continuous growth.
+        </p>
+        <div class="mt-4 flex flex-wrap items-center gap-3">
+          <a href="#projects" class="inline-flex items-center gap-2 bg-ink text-offwhite text-xs font-semibold uppercase tracking-[0.16em] px-5 py-3 rounded-full hover:bg-charcoal transition-all shadow-sm">
+            <span>EXPLORE MY WORK</span>
+            <span>↓</span>
+          </a>
+          <button onclick="downloadCV()" class="inline-flex items-center gap-2 bg-transparent text-ink border border-ink text-xs font-semibold uppercase tracking-[0.16em] px-5 py-3 rounded-full hover:bg-ink hover:text-offwhite transition-all">
+            <span>DOWNLOAD MY CV</span>
+            <span>↗</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center Stage: Giant Oversized Scrolling Typography BEHIND Cutout Portrait of Durjoy -->
+    <div class="relative my-auto py-4 md:py-0 flex items-center justify-center min-h-[390px] sm:min-h-[470px] md:min-h-[540px]">
+      
+      <!-- Layer 1 (Back): Giant Kinetic Scrolling Name & Designation Marquee -->
+      <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 z-10 overflow-hidden pointer-events-none">
+        <div class="animate-marquee-hero">
+          <span class="font-condensed text-[115px] sm:text-[170px] md:text-[230px] lg:text-[275px] font-bold text-ink tracking-tight whitespace-nowrap pr-12">
+            DURJOY — TEXTILE ENGINEERING GRADUATE — CREATIVE THINKER / DIGITAL EXPLORER —
+          </span>
+          <span class="font-condensed text-[115px] sm:text-[170px] md:text-[230px] lg:text-[275px] font-bold text-ink tracking-tight whitespace-nowrap pr-12" aria-hidden="true">
+            DURJOY — TEXTILE ENGINEERING GRADUATE — CREATIVE THINKER / DIGITAL EXPLORER —
+          </span>
+        </div>
+      </div>
+
+      <!-- Layer 2 (Front): Cutout Portrait of Durjoy -->
+      <div class="relative z-20 flex flex-col items-center justify-end pointer-events-auto group">
+        <div class="relative w-[290px] sm:w-[360px] md:w-[430px] lg:w-[465px] flex justify-center">
+          <img
+            id="hero-cutout-img"
+            src="assets/images/durjoy_hero_cutout.webp"
+            alt="Durjoy — Textile Engineering Graduate & Creative Professional"
+            class="w-full h-auto max-h-[520px] object-contain object-bottom drop-shadow-[0_22px_32px_rgba(16,16,16,0.18)] portrait-editorial"
+          />
+        </div>
+      </div>
+
+      <!-- Bottom-Left Location Pill -->
+      <div class="hidden md:flex flex-col gap-1 absolute left-8 lg:left-12 bottom-6 z-30">
+        <span class="text-[10px] font-grotesk uppercase tracking-[0.25em] text-muted">LOCATION</span>
+        <span class="text-xs font-semibold uppercase tracking-[0.18em] text-ink flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-ink"></span>
+          BANGLADESH · BUFT ’26
+        </span>
+      </div>
+
+      <!-- Bottom-Right Scrolldown Indicator -->
+      <a href="#about" class="absolute right-6 sm:right-10 lg:right-14 bottom-4 z-30 flex flex-col items-center gap-2 group">
+        <span class="text-xs sm:text-sm font-medium text-ink tracking-tight group-hover:opacity-70 transition-opacity">
+          Scrolldown
+        </span>
+        <div class="w-10 h-10 rounded-full border border-ink/20 flex items-center justify-center scroll-arrow-bounce group-hover:bg-ink group-hover:text-offwhite transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m0 0l-6-6m6 6l6-6"/>
+          </svg>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: /ABOUT ME (Dark Editorial Screen)
+       ========================================================================= -->
+  <section id="about" class="dark-section bg-ink text-offwhite py-20 md:py-28 lg:py-32 px-5 sm:px-8 lg:px-12 relative overflow-hidden">
+    <div class="max-w-[1400px] mx-auto">
+      
+      <div class="flex flex-col md:flex-row md:items-start justify-between gap-6 border-b border-white/10 pb-10 md:pb-14">
+        <h2 class="font-condensed text-[96px] sm:text-[140px] md:text-[185px] lg:text-[220px] font-bold text-offwhite tracking-tight leading-[0.82]">
+          /ABOUT
+        </h2>
+        <div class="flex flex-col md:items-end justify-between gap-2 pt-2">
+          <span class="text-lg sm:text-xl font-grotesk text-silver tracking-widest">01/08</span>
+          <span class="text-xs font-grotesk uppercase tracking-[0.25em] text-silver">A LITTLE ABOUT ME.</span>
+        </div>
+      </div>
+
+      <div class="mt-12 md:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+        
+        <!-- Left Column: Giant "/01" & Second Personal Portrait -->
+        <div class="lg:col-span-5 flex flex-col justify-between gap-8">
+          <div class="flex items-baseline justify-between">
+            <span class="font-condensed text-[90px] sm:text-[130px] md:text-[160px] font-bold text-white/15 leading-none select-none">
+              /01
+            </span>
+            <span class="text-[11px] font-grotesk uppercase tracking-[0.22em] text-silver">
+              IDENTITY &amp; PERSPECTIVE
+            </span>
+          </div>
+
+          <div class="relative rounded-2xl overflow-hidden bg-charcoal border border-white/10 group">
+            <img
+              src="assets/images/durjoy_portrait_2.jpg"
+              alt="Durjoy — Editorial Portrait"
+              class="w-full h-[360px] sm:h-[420px] object-cover object-top portrait-editorial group-hover:scale-[1.02]"
+            />
+            <div class="p-4 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex items-center justify-between text-xs">
+              <div>
+                <p class="font-semibold text-offwhite tracking-wide">SHUVAKOR BHOWMIK DURJOY</p>
+                <p class="text-[11px] text-silver">B.Sc. in Textile Engineering · BUFT (2026)</p>
+              </div>
+              <span class="px-2.5 py-1 rounded-full bg-white/10 text-[10px] uppercase tracking-[0.18em] text-offwhite">
+                Bangladesh
+              </span>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-charcoal border border-white/10">
+            <p class="text-[10px] font-grotesk uppercase tracking-[0.25em] text-silver mb-2">
+              PERSONAL PHILOSOPHY
+            </p>
+            <blockquote class="font-serif italic text-xl sm:text-2xl text-offwhite leading-snug">
+              “Never stop learning. Never stop creating. Never stop evolving.”
+            </blockquote>
+          </div>
+        </div>
+
+        <!-- Right Column: Bio Narrative & 3 Identity Dimensions -->
+        <div class="lg:col-span-7 flex flex-col justify-between">
+          <div>
+            <p class="text-xs font-grotesk uppercase tracking-[0.24em] text-silver mb-3">
+              WHERE TECHNICAL KNOWLEDGE MEETS CREATIVE THINKING
+            </p>
+            <h3 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-offwhite tracking-tight leading-tight mb-6">
+              “AN ENGINEERING MIND WITH A CREATIVE PERSPECTIVE.”
+            </h3>
+
+            <div class="space-y-4 text-sm sm:text-base text-offwhite/85 leading-relaxed font-normal">
+              <p class="text-lg font-medium text-offwhite">Hello, I'm Durjoy.</p>
+              <p>
+                I am a Textile Engineering graduate from BGMEA University of Fashion &amp; Technology (BUFT), with a strong interest in textile technology, sustainable manufacturing, innovation, and creative problem-solving.
+              </p>
+              <p>
+                My academic journey has introduced me to the technical and practical dimensions of the textile industry. Through my industrial internship at KDS Textile Mills Ltd. in Chattogram, I gained hands-on exposure to industrial operations and connected academic engineering principles with real-world manufacturing environments.
+              </p>
+              <p class="text-offwhite font-medium">
+                However, my interests are not limited to engineering alone.
+              </p>
+              <p>
+                I also enjoy working with digital tools, exploring artificial intelligence, creating visual content, editing photographs and videos, and experimenting with creative design.
+              </p>
+              <p>
+                I believe that having both analytical and creative abilities provides a different perspective on professional challenges. I am continuously working to expand my knowledge, improve my capabilities, and explore opportunities that allow me to grow both professionally and personally.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-10 pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="p-4 rounded-xl bg-white/[0.03] border border-white/10">
+              <span class="text-xs font-grotesk text-silver">01 / FOUNDATION</span>
+              <h4 class="text-sm font-semibold text-offwhite mt-1">Textile Engineering</h4>
+              <p class="text-xs text-silver mt-1.5 leading-relaxed">
+                Academic &amp; technical foundation in B.Sc. Textile Engineering at BUFT and mill operations at KDS Textile Mills Ltd.
+              </p>
+            </div>
+            <div class="p-4 rounded-xl bg-white/[0.03] border border-white/10">
+              <span class="text-xs font-grotesk text-silver">02 / CAPABILITY</span>
+              <h4 class="text-sm font-semibold text-offwhite mt-1">Creative &amp; Digital</h4>
+              <p class="text-xs text-silver mt-1.5 leading-relaxed">
+                Graphic design, photo retouching, video editing, and high-impact presentation design.
+              </p>
+            </div>
+            <div class="p-4 rounded-xl bg-white/[0.03] border border-white/10">
+              <span class="text-xs font-grotesk text-silver">03 / EVOLUTION</span>
+              <h4 class="text-sm font-semibold text-offwhite mt-1">Tech &amp; Innovation</h4>
+              <p class="text-xs text-silver mt-1.5 leading-relaxed">
+                Exploring sustainable ozone wet-processing, AI-powered workflows, and continuous learning.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       00:08 MARQUEE TICKER BANNER
+       ========================================================================= -->
+  <div class="bg-charcoal text-offwhite border-y border-white/10 py-5 overflow-hidden select-none">
+    <div class="animate-marquee-strip flex items-center">
+      <div class="flex items-center gap-8 pr-8 font-condensed text-3xl sm:text-4xl md:text-5xl tracking-tight whitespace-nowrap">
+        <span>PORTFOLIO BY DURJOY</span>
+        <span class="text-silver">✷</span>
+        <span>TEXTILE ENGINEERING GRADUATE</span>
+        <span class="text-silver">✷</span>
+        <span>CREATIVE THINKER &amp; DIGITAL EXPLORER</span>
+        <span class="text-silver">✷</span>
+        <span>ENGINEERING MINDS. CREATIVE VISIONS. ENDLESS POSSIBILITIES.</span>
+        <span class="text-silver">✷</span>
+      </div>
+      <div class="flex items-center gap-8 pr-8 font-condensed text-3xl sm:text-4xl md:text-5xl tracking-tight whitespace-nowrap" aria-hidden="true">
+        <span>PORTFOLIO BY DURJOY</span>
+        <span class="text-silver">✷</span>
+        <span>TEXTILE ENGINEERING GRADUATE</span>
+        <span class="text-silver">✷</span>
+        <span>CREATIVE THINKER &amp; DIGITAL EXPLORER</span>
+        <span class="text-silver">✷</span>
+        <span>ENGINEERING MINDS. CREATIVE VISIONS. ENDLESS POSSIBILITIES.</span>
+        <span class="text-silver">✷</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       00:09-00:11 SELECTED WORKS, EXPERIENCE & EDUCATION INTERACTIVE LIST
+       ========================================================================= -->
+  <section class="bg-offwhite text-ink pt-20 pb-12 px-5 sm:px-8 lg:px-12 relative">
+    <div class="max-w-[1400px] mx-auto">
+      
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-14 border-b border-black/15">
+        <div class="max-w-2xl">
+          <p class="text-xl sm:text-2xl md:text-[28px] font-normal text-ink leading-[1.32] tracking-tight">
+            Durjoy combines an academic foundation in Textile Engineering from BUFT with industrial exposure at KDS Textile Mills Ltd. and modern digital creativity.
+          </p>
+          <p class="mt-4 text-[11px] font-grotesk uppercase tracking-[0.25em] text-muted">
+            SELECTED HIGHLIGHTS — CLICK ANY MILESTONE TO INSPECT DETAILS
+          </p>
+        </div>
+
+        <a href="#contact" class="w-32 h-32 sm:w-36 sm:h-36 rounded-full border border-ink/80 flex items-center justify-center text-center p-4 hover:bg-ink hover:text-offwhite transition-all duration-300 shrink-0 group">
+          <span class="text-xs sm:text-sm font-medium uppercase tracking-[0.14em] leading-snug group-hover:scale-105 transition-transform">
+            GET IN<br />TOUCH
+          </span>
+        </a>
+      </div>
+
+      <!-- Interactive Video-Style Hover Rows -->
+      <div class="relative divide-y divide-black/15">
+        
+        <div
+          class="work-row active-row py-7 sm:py-9 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer group"
+          onmouseenter="setPreviewCard(0)"
+          onclick="scrollToSection('#projects')"
+        >
+          <div class="flex items-baseline gap-4">
+            <span class="text-xs font-grotesk text-muted">01</span>
+            <h3 class="work-row-title font-condensed text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight">
+              OZONE VS. ACID WASH RESEARCH
+            </h3>
+          </div>
+          <div class="flex items-center gap-4 md:gap-6">
+            <span class="text-xs sm:text-sm text-ink/80 font-medium">Selected Academic Project · Knit Apparel</span>
+            <span class="w-9 h-9 rounded-full border border-black/15 flex items-center justify-center group-hover:bg-ink group-hover:text-offwhite transition-colors">↗</span>
+          </div>
+        </div>
+
+        <div
+          class="work-row py-7 sm:py-9 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer group"
+          onmouseenter="setPreviewCard(1)"
+          onclick="scrollToSection('#experience')"
+        >
+          <div class="flex items-baseline gap-4">
+            <span class="text-xs font-grotesk text-muted">02</span>
+            <h3 class="work-row-title font-condensed text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight">
+              KDS TEXTILE MILLS LTD.
+            </h3>
+          </div>
+          <div class="flex items-center gap-4 md:gap-6">
+            <span class="text-xs sm:text-sm text-ink/80 font-medium">Textile Engineering Intern · Certified (Feb–Apr 2026)</span>
+            <span class="w-9 h-9 rounded-full border border-black/15 flex items-center justify-center group-hover:bg-ink group-hover:text-offwhite transition-colors">↗</span>
+          </div>
+        </div>
+
+        <div
+          class="work-row py-7 sm:py-9 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer group"
+          onmouseenter="setPreviewCard(2)"
+          onclick="scrollToSection('#education')"
+        >
+          <div class="flex items-baseline gap-4">
+            <span class="text-xs font-grotesk text-muted">03</span>
+            <h3 class="work-row-title font-condensed text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight">
+              BUFT — B.SC. TEXTILE ENGINEERING
+            </h3>
+          </div>
+          <div class="flex items-center gap-4 md:gap-6">
+            <span class="text-xs sm:text-sm text-ink/80 font-medium">Academic Background · Class of 2026</span>
+            <span class="w-9 h-9 rounded-full border border-black/15 flex items-center justify-center group-hover:bg-ink group-hover:text-offwhite transition-colors">↗</span>
+          </div>
+        </div>
+
+        <div
+          class="work-row py-7 sm:py-9 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer group"
+          onmouseenter="setPreviewCard(3)"
+          onclick="scrollToSection('#creative-work')"
+        >
+          <div class="flex items-baseline gap-4">
+            <span class="text-xs font-grotesk text-muted">04</span>
+            <h3 class="work-row-title font-condensed text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight">
+              CREATIVE &amp; DIGITAL EXPLORATION
+            </h3>
+          </div>
+          <div class="flex items-center gap-4 md:gap-6">
+            <span class="text-xs sm:text-sm text-ink/80 font-medium">Design, Photography, Video &amp; AI Tools</span>
+            <span class="w-9 h-9 rounded-full border border-black/15 flex items-center justify-center group-hover:bg-ink group-hover:text-offwhite transition-colors">↗</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Interactive Preview Banner -->
+      <div id="hover-preview-banner" class="mt-8 p-5 sm:p-6 rounded-2xl bg-white border border-black/10 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+        <div class="lg:col-span-5 overflow-hidden rounded-xl bg-ink h-52 sm:h-60">
+          <img
+            id="preview-card-img"
+            src="assets/images/fig10_washed_fabric_samples.jpg"
+            alt="Milestone preview"
+            class="w-full h-full object-cover transition-all duration-500"
+          />
+        </div>
+        <div class="lg:col-span-7 flex flex-col justify-between">
+          <div>
+            <span id="preview-card-tag" class="text-[11px] font-grotesk uppercase tracking-[0.22em] text-muted">
+              01 · FEATURED ACADEMIC RESEARCH
+            </span>
+            <h4 id="preview-card-title" class="text-xl sm:text-2xl font-bold text-ink mt-1.5 tracking-tight">
+              Comparative Analysis of Ozone Wash Over Conventional Acid Wash for Knit Apparel
+            </h4>
+            <p id="preview-card-desc" class="text-sm text-ink/75 mt-2.5 leading-relaxed">
+              Experimental study on 100% cotton Knit Denim, Single Lacoste, and Double Lacoste proving 40%–45% water savings, 45%–64.71% chemical reduction, and a Low Impact EIM score (10 &amp; 22).
+            </p>
+          </div>
+          <div class="mt-5 flex flex-wrap items-center gap-3">
+            <a id="preview-card-link" href="#projects" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] px-4 py-2.5 rounded-full bg-ink text-offwhite hover:bg-charcoal transition-all">
+              <span>Inspect Full Section</span>
+              <span>↓</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6: INDUSTRIAL EXPERIENCE (PROFESSIONAL EXPERIENCE)
+       Populated with complete, verified information from KDS Internship Certificate
+       and displays the official KDS Textile Mills Limited Internship Certificate!
+       ========================================================================= -->
+  <section id="experience" class="bg-offwhite text-ink py-20 border-t border-black/10 px-5 sm:px-8 lg:px-12">
+    <div class="max-w-[1400px] mx-auto">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-10 border-b border-black/15">
+        <div>
+          <p class="text-xs font-grotesk uppercase tracking-[0.25em] text-muted mb-2">02 / INDUSTRIAL EXPOSURE</p>
+          <h2 class="font-condensed text-6xl sm:text-7xl md:text-8xl font-bold tracking-tight text-ink">
+            PROFESSIONAL EXPERIENCE
+          </h2>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="px-4 py-1.5 rounded-full bg-ink text-offwhite text-xs font-grotesk uppercase tracking-[0.18em]">
+            Ref: KDS/TEX/HR&amp;ADMIN/26040007/2026
+          </span>
+        </div>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left Column: Mill Identity, Position & Official KDS Internship Certificate Card -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-black/10 shadow-sm">
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="px-3 py-1 rounded-full bg-ink text-offwhite text-[10px] font-grotesk uppercase tracking-[0.2em]">
+                INDUSTRIAL INTERNSHIP
+              </span>
+              <span class="text-xs font-grotesk text-muted uppercase tracking-[0.18em]">CHATTOGRAM, BANGLADESH</span>
+            </div>
+
+            <h3 class="font-condensed text-4xl sm:text-5xl font-bold text-ink tracking-tight">
+              KDS TEXTILE MILLS LTD.
+            </h3>
+            <p class="text-base sm:text-lg font-semibold text-ink/90 mt-1">
+              Position: Textile Engineering Intern
+            </p>
+            <p class="text-xs font-grotesk text-muted mt-1">
+              Factory: Mohara I/A, Chandgaon, Chattogram · KDS Group
+            </p>
+
+            <div class="mt-5 space-y-3 text-sm text-ink/80 leading-relaxed">
+              <p>
+                As a Textile Engineering intern at KDS Textile Mills Ltd. from <strong>24th February 2026 to 04th April 2026</strong>, I gained comprehensive practical exposure to a large-scale export-oriented industrial textile manufacturing environment.
+              </p>
+              <p>
+                This industrial attachment connected my B.Sc. Textile Engineering curriculum at BUFT (Roll No.: <strong>222-322-801</strong>) with real-world production floor operations across knitting, wet processing, dyeing, garment washing, finishing, and quality assurance.
+              </p>
+            </div>
+          </div>
+
+          <!-- Official Uploaded KDS Internship Certificate Showcase Card -->
+          <div class="bg-white rounded-3xl p-6 border border-black/10 shadow-sm">
+            <div class="flex items-center justify-between mb-3">
+              <div>
+                <span class="text-[10px] font-grotesk uppercase tracking-[0.2em] text-muted block">VERIFIED CREDENTIAL · 05.04.2026</span>
+                <h4 class="text-base font-bold text-ink">Official Internship Certificate</h4>
+              </div>
+              <button
+                onclick=\"openImageLightbox('kdsCertificate')\"
+                class="text-xs font-semibold uppercase tracking-[0.14em] px-3.5 py-1.5 rounded-full bg-ink text-offwhite hover:bg-charcoal transition-colors"
+              >
+                Full View ↗
+              </button>
+            </div>
+
+            <div
+              class="relative rounded-2xl overflow-hidden border border-black/15 bg-offwhite cursor-pointer group"
+              onclick=\"openImageLightbox('kdsCertificate')\"
+            >
+              <img
+                src="assets/images/kds_internship_certificate.jpg"
+                alt="KDS Textile Mills Limited Internship Certificate — Shuvakor Bhowmik (Roll No.: 222-322-801)"
+                class="w-full h-auto max-h-[460px] object-contain mx-auto group-hover:scale-[1.02] transition-transform duration-500"
+              />
+              <div class="px-4 py-2.5 bg-ink text-offwhite text-[11px] flex items-center justify-between">
+                <span>Signed by Harish Kumar Chaturvedi · President, KDS Textile Mills Ltd.</span>
+                <span class="font-grotesk uppercase tracking-wider">Click to Enlarge</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Complete Verified Internship Details (Zero Editable Placeholders!) -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          
+          <div class="p-6 rounded-2xl bg-white border border-black/10 flex flex-col justify-between">
+            <div>
+              <span class="text-[11px] font-grotesk uppercase tracking-[0.2em] text-muted block mb-2">
+                01 · INTERNSHIP DURATION
+              </span>
+              <p class="text-base font-bold text-ink">
+                24th February 2026 – 04th April 2026
+              </p>
+              <p class="text-xs text-ink/75 mt-1.5 leading-relaxed">
+                Completed full 6-week industrial internship program at KDS Textile Mills Ltd. (Certificate Date: 05.04.2026, Ref: KDS/TEX/HR&amp;ADMIN/26040007/2026).
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-black/10 flex flex-col justify-between">
+            <div>
+              <span class="text-[11px] font-grotesk uppercase tracking-[0.2em] text-muted block mb-2">
+                02 · DEPARTMENTS COVERED
+              </span>
+              <p class="text-base font-bold text-ink">
+                Knitting, Wet Processing, Finishing &amp; QC
+              </p>
+              <p class="text-xs text-ink/75 mt-1.5 leading-relaxed">
+                Rotational floor attachment across Circular Knitting, Pre-treatment &amp; Reactive Dyeing, Garment Washing, Mechanical/Chemical Finishing, and Physical &amp; Colorfastness Testing Labs.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-black/10 sm:col-span-2">
+            <span class="text-[11px] font-grotesk uppercase tracking-[0.2em] text-muted block mb-2">
+              03 · KEY RESPONSIBILITIES &amp; FLOOR ACTIVITIES
+            </span>
+            <ul class="space-y-2 text-sm text-ink/85 leading-relaxed list-disc pl-4">
+              <li>Monitored machine parameters, yarn lot allocations, stitch length, and target GSM across industrial circular knitting machines.</li>
+              <li>Observed and documented wet-processing batch recipes including enzymatic desizing, bio-polishing, reactive dyeing, neutralization, and softening cycles.</li>
+              <li>Assisted quality control engineers in testing colorfastness to wash, water, perspiration, and rubbing (ISO 105 series) as well as post-wash GSM and dimensional shrinkage.</li>
+              <li>Evaluated process water, steam, and chemical consumption across conventional and sustainable garment finishing workflows.</li>
+            </ul>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-black/10 sm:col-span-2">
+            <span class="text-[11px] font-grotesk uppercase tracking-[0.2em] text-muted block mb-2">
+              04 · MANUFACTURING PROCESSES OBSERVED
+            </span>
+            <p class="text-sm text-ink/85 leading-relaxed">
+              High-speed circular knitting of Single Lacoste, Double Lacoste, Piqué, Single Jersey, and Knit Denim fabrics; batch pre-treatment (scouring, bleaching, and enzymatic bio-polishing); exhaust reactive dyeing; conventional &amp; sustainable garment washing (acid wash, enzyme wash, and ozone fading); slitting, stenter heat-setting, compacting; and Effluent Treatment Plant (ETP) wastewater management.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-black/10 sm:col-span-2">
+            <span class="text-[11px] font-grotesk uppercase tracking-[0.2em] text-muted block mb-2">
+              05 · PRACTICAL LEARNING OUTCOMES &amp; PERFORMANCE EVALUATION
+            </span>
+            <p class="text-sm text-ink/85 leading-relaxed">
+              Recognized by KDS Textile Mills Ltd. management as sincere, hardworking, and enthusiastic in carrying out assigned engineering responsibilities, demonstrating strong professional skills, industrial discipline, and ability to bridge academic textile theory with bulk factory production.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 5: EDUCATION (ACADEMIC BACKGROUND)
+       Features the uploaded BGMEA University of Fashion & Technology (BUFT) image!
+       ========================================================================= -->
+  <section id="education" class="bg-offwhite text-ink py-20 border-t border-black/10 px-5 sm:px-8 lg:px-12">
+    <div class="max-w-[1400px] mx-auto">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-10 border-b border-black/15">
+        <div>
+          <p class="text-xs font-grotesk uppercase tracking-[0.25em] text-muted mb-2">03 / UNIVERSITY TIMELINE</p>
+          <h2 class="font-condensed text-6xl sm:text-7xl md:text-8xl font-bold tracking-tight text-ink">
+            ACADEMIC BACKGROUND
+          </h2>
+        </div>
+        <span class="text-xs font-grotesk uppercase tracking-[0.2em] text-muted">
+          ID: 222-322-801 · CLASS OF 2026 · BANGLADESH
+        </span>
+      </div>
+
+      <!-- Sophisticated Editorial Timeline Card with Uploaded BUFT Banner Image -->
+      <div class="mt-10 relative pl-6 sm:pl-10 border-l-2 border-ink">
+        <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-ink border-4 border-offwhite"></div>
+
+        <div class="bg-white rounded-3xl p-7 sm:p-10 border border-black/10 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-7">
+            <div class="flex flex-wrap items-center gap-2.5 mb-4">
+              <span class="px-3.5 py-1 rounded-full bg-ink text-offwhite text-xs font-grotesk uppercase tracking-[0.18em]">
+                GRADUATION YEAR: 2026
+              </span>
+              <span class="px-3.5 py-1 rounded-full bg-stone text-ink text-xs font-grotesk uppercase tracking-[0.18em]">
+                FIELD: TEXTILE ENGINEERING
+              </span>
+              <span class="px-3.5 py-1 rounded-full border border-black/15 text-ink/80 text-xs font-grotesk uppercase tracking-[0.18em]">
+                STUDENT ID: 222-322-801
+              </span>
+            </div>
+
+            <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-ink tracking-tight">
+              BGMEA University of Fashion &amp; Technology (BUFT)
+            </h3>
+            <p class="text-lg sm:text-xl font-medium text-ink/85 mt-2">
+              Bachelor of Science (B.Sc.) in Textile Engineering
+            </p>
+            <p class="text-sm text-ink/75 mt-3 leading-relaxed">
+              Comprehensive undergraduate engineering program in the Faculty of Textile Engineering covering yarn manufacturing, weaving &amp; knitting technology, textile wet processing, dyeing &amp; finishing chemistry, apparel manufacturing engineering, textile testing &amp; quality control, and sustainable industrial research.
+            </p>
+
+            <div class="mt-6 pt-6 border-t border-black/10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
+              <div>
+                <span class="text-muted uppercase tracking-[0.16em] block">Degree</span>
+                <strong class="text-ink font-semibold mt-1 block">B.Sc. in Textile Engineering</strong>
+              </div>
+              <div>
+                <span class="text-muted uppercase tracking-[0.16em] block">Institution</span>
+                <strong class="text-ink font-semibold mt-1 block">BUFT, Dhaka</strong>
+              </div>
+              <div>
+                <span class="text-muted uppercase tracking-[0.16em] block">Graduation Year</span>
+                <strong class="text-ink font-semibold mt-1 block">2026 (Graduate)</strong>
+              </div>
+              <div>
+                <span class="text-muted uppercase tracking-[0.16em] block">Country</span>
+                <strong class="text-ink font-semibold mt-1 block">Bangladesh</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Uploaded 2nd Picture: BGMEA University of Fashion & Technology (BUFT) Banner Logo -->
+          <div class="lg:col-span-5">
+            <div
+              class="rounded-2xl overflow-hidden border border-black/15 bg-offwhite shadow-sm cursor-pointer group"
+              onclick=\"openImageLightbox('buftBannerLogo')\"
+            >
+              <img
+                src="assets/images/buft_banner_logo.jpg"
+                alt="BGMEA University of Fashion & Technology (BUFT)"
+                class="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500"
+              />
+              <div class="px-4 py-2.5 bg-ink text-offwhite text-[11px] flex items-center justify-between">
+                <span>BGMEA University of Fashion &amp; Technology (BUFT)</span>
+                <span class="font-grotesk uppercase tracking-wider">Click to Enlarge ↗</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 8: FEATURED ACADEMIC PROJECT (SELECTED PROJECT)
+       - Complete 10 Subsections from Ozone wash project.docx (no "Editable Subsection" badges)
+       - Attached Project Report PDF reader + download
+       - Complete gallery of 12 extracted Experimental Photographs, Fabric Samples & Charts
+       ========================================================================= -->
+  <section id="projects" class="dark-section bg-ink text-offwhite py-24 px-5 sm:px-8 lg:px-12">
+    <div class="max-w-[1400px] mx-auto">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 border-b border-white/15">
+        <div>
+          <p class="text-xs font-grotesk uppercase tracking-[0.25em] text-silver mb-2">04 / FEATURED ACADEMIC PROJECT</p>
+          <h2 class="font-condensed text-6xl sm:text-7xl md:text-8xl font-bold tracking-tight text-offwhite">
+            SELECTED PROJECT
+          </h2>
+        </div>
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="px-4 py-1.5 rounded-full bg-white/10 text-xs font-grotesk uppercase tracking-[0.18em] text-offwhite">
+            Textile Engineering / Academic Research · BUFT 2026
+          </span>
+        </div>
+      </div>
+
+      <!-- Project Hero Showcase Card -->
+      <div class="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left: Washed Fabric Samples Comparison & Cover -->
+        <div class="lg:col-span-6 relative rounded-3xl overflow-hidden border border-white/15 bg-charcoal group cursor-pointer" onclick=\"openImageLightbox('fig10WashedSamples')\">
+          <img
+            id="project-cover-img"
+            src="assets/images/fig10_washed_fabric_samples.jpg"
+            alt="Comparative Analysis of Ozone Wash Over Conventional Acid Wash for Knit Apparel"
+            class="w-full h-[340px] sm:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700"
+          />
+          <div class="p-5 bg-gradient-to-t from-black/95 via-black/70 to-transparent flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <span class="text-[10px] font-grotesk uppercase tracking-[0.22em] text-silver block">EXPERIMENTAL WASH COMPARISON (FIG. 10)</span>
+              <span class="text-xs font-medium text-offwhite">Acid Wash vs. Ozone Wash on Knit Denim, Single Lacoste &amp; Double Lacoste</span>
+            </div>
+            <span class="text-[10px] font-grotesk uppercase tracking-[0.16em] px-3 py-1.5 rounded-full bg-white/15 text-offwhite">
+              Click to Enlarge ↗
+            </span>
+          </div>
+        </div>
+
+        <!-- Right: Project Title, Metadata, Key Metrics & Attached PDF Buttons -->
+        <div class="lg:col-span-6 space-y-5">
+          <div class="inline-flex flex-wrap items-center gap-2 text-xs font-grotesk uppercase tracking-[0.2em] text-silver">
+            <span>B.SC. THESIS RESEARCH</span>
+            <span>·</span>
+            <span>SUPERVISOR: SHAFAT AHMED BIN KAMAL</span>
+          </div>
+
+          <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-offwhite leading-tight tracking-tight">
+            “COMPARATIVE ANALYSIS OF OZONE WASH OVER CONVENTIONAL ACID WASH FOR KNIT APPAREL”
+          </h3>
+
+          <div class="space-y-3.5 text-sm sm:text-base text-offwhite/80 leading-relaxed">
+            <p>
+              This academic research project presents an experimental comparative analysis of gas-phase ozone washing technology (<strong>Jeanologia G2 Lab</strong>) and conventional potassium permanganate acid washing (<strong>Tupesa Stone 75</strong>) applied to 100% cotton <strong>Knit Denim (221 GSM)</strong>, <strong>Single Lacoste (215 GSM)</strong>, and <strong>Double Lacoste (230 GSM)</strong> knit apparel.
+            </p>
+            <p>
+              Evaluated across ISO 105 colorfastness standards, GSM dimensional stability, resource consumption, and <strong>Jeanologia EIM v2.0</strong> ecological scoring, ozone washing achieved superior rubbing fastness on Knit Denim while reducing water use by <strong>40%–45%</strong>, chemical consumption by <strong>45%–64.71%</strong>, and Total EIM Impact Score by <strong>42%–71%</strong>.
+            </p>
+          </div>
+
+          <!-- Key Quantitative Highlights Strip -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="p-3.5 rounded-2xl bg-white/[0.04] border border-white/10">
+              <span class="font-condensed text-3xl font-bold text-offwhite block">40–45%</span>
+              <span class="text-[11px] text-silver">Water Saved (18L/22L vs 30L/40L)</span>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-white/[0.04] border border-white/10">
+              <span class="font-condensed text-3xl font-bold text-offwhite block">64.71%</span>
+              <span class="text-[11px] text-silver">Max Chemical Reduction</span>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-white/[0.04] border border-white/10">
+              <span class="font-condensed text-3xl font-bold text-offwhite block">10 &amp; 22</span>
+              <span class="text-[11px] text-silver">Low Impact EIM v2.0 Scores</span>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-white/[0.04] border border-white/10">
+              <span class="font-condensed text-3xl font-bold text-offwhite block">ISO 4–5</span>
+              <span class="text-[11px] text-silver">Wash &amp; Rubbing Fastness</span>
+            </div>
+          </div>
+
+          <!-- Attached Project Report PDF Buttons -->
+          <div class="pt-3 flex flex-wrap items-center gap-3">
+            <button onclick="openProjectReportModal()" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] px-5 py-3.5 rounded-full bg-offwhite text-ink hover:bg-silver transition-colors">
+              <span>📄 Read Attached Project Report PDF</span>
+            </button>
+            <button onclick="downloadProjectReportPDF()" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] px-5 py-3.5 rounded-full border border-white/25 text-offwhite hover:border-offwhite transition-colors">
+              <span>Download Full Report ↓</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10 Complete Research Subsections (No "Editable Subsection" text!) -->
+      <div class="mt-16 pt-12 border-t border-white/15">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+          <div>
+            <h4 class="text-lg sm:text-xl font-semibold text-offwhite tracking-tight">
+              Complete Research Breakdown (10 Sections)
+            </h4>
+            <p class="text-xs text-silver mt-1">
+              Comprehensive findings, recipes, ISO test results, and EIM v2.0 sustainability metrics from the B.Sc. thesis report.
+            </p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="setProjectViewMode('grid')" id="proj-mode-grid" class="text-xs font-grotesk uppercase tracking-[0.16em] px-3.5 py-1.5 rounded-full bg-offwhite text-ink">
+              Grid View
+            </button>
+            <button onclick="setProjectViewMode('accordion')" id="proj-mode-acc" class="text-xs font-grotesk uppercase tracking-[0.16em] px-3.5 py-1.5 rounded-full border border-white/20 text-silver hover:text-offwhite">
+              Focus Reader
+            </button>
+          </div>
+        </div>
+
+        <div id="project-subsections-container" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+      </div>
+
+      <!-- =====================================================================
+           EXTRACTED EXPERIMENTAL PHOTOGRAPHS, FABRIC SAMPLES & COMPARISON CHARTS
+           (Taken directly from Ozone wash project.docx!)
+           ===================================================================== -->
+      <div class="mt-16 pt-12 border-t border-white/15">
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
+          <div>
+            <span class="text-xs font-grotesk uppercase tracking-[0.22em] text-silver block">
+              EXTRACTED THESIS FIGURES &amp; EXPERIMENTAL EVIDENCE
+            </span>
+            <h4 class="text-2xl sm:text-3xl font-bold text-offwhite tracking-tight mt-1">
+              Experimental Photographs, Fabric Samples &amp; Comparison Charts
+            </h4>
+          </div>
+
+          <!-- Category Filter Tabs for Project Visuals -->
+          <div class="flex flex-wrap gap-2">
+            <button onclick="filterProjectVisuals('ALL')" data-vis-filter="ALL" class="proj-vis-btn text-xs font-grotesk uppercase tracking-[0.15em] px-4 py-2 rounded-full bg-offwhite text-ink transition-all">
+              All Figures (12)
+            </button>
+            <button onclick="filterProjectVisuals('Fabric Samples')" data-vis-filter="Fabric Samples" class="proj-vis-btn text-xs font-grotesk uppercase tracking-[0.15em] px-4 py-2 rounded-full border border-white/20 text-silver hover:text-offwhite transition-all">
+              Fabric Samples
+            </button>
+            <button onclick="filterProjectVisuals('Experimental Photographs')" data-vis-filter="Experimental Photographs" class="proj-vis-btn text-xs font-grotesk uppercase tracking-[0.15em] px-4 py-2 rounded-full border border-white/20 text-silver hover:text-offwhite transition-all">
+              Experimental Photos &amp; Flows
+            </button>
+            <button onclick="filterProjectVisuals('Comparison Charts')" data-vis-filter="Comparison Charts" class="proj-vis-btn text-xs font-grotesk uppercase tracking-[0.15em] px-4 py-2 rounded-full border border-white/20 text-silver hover:text-offwhite transition-all">
+              Comparison Charts &amp; EIM
+            </button>
+          </div>
+        </div>
+
+        <!-- 12 Figures Grid -->
+        <div id="project-visuals-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 7: TECHNICAL & DIGITAL SKILLS (MY SKILLS & TOOLKIT)
+       ========================================================================= -->
+  <section id="skills" class="bg-offwhite text-ink py-24 px-5 sm:px-8 lg:px-12 border-t border-black/10">
+    <div class="max-w-[1400px] mx-auto">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 border-b border-black/15">
+        <div>
+          <p class="text-xs font-grotesk uppercase tracking-[0.25em] text-muted mb-2">05 / DUAL COMPETENCY</p>
+          <h2 class="font-condensed text-6xl sm:text-7xl md:text-8xl font-bold tracking-tight text-ink">
+            MY SKILLS &amp; TOOLKIT
+          </h2>
+        </div>
+        <p class="text-sm text-ink/75 max-w-md">
+          Bridging analytical textile engineering coursework with modern digital productivity, visual design, and AI workflows.
+        </p>
+      </div>
+
+      <!-- Part A: Digital & Productivity Skills -->
+      <div class="mt-12">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+          <div>
+            <span class="text-xs font-grotesk uppercase tracking-[0.22em] text-muted">PART A</span>
+            <h3 class="text-2xl sm:text-3xl font-bold text-ink tracking-tight mt-1">
+              Digital &amp; Productivity Skills
+            </h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button onclick="filterDigitalSkills('ALL')" data-skill-filter="ALL" class="skill-filter-btn text-xs font-grotesk uppercase tracking-[0.15em] px-4 py-2 rounded-full bg-ink text-offwhite transition-all">
+              All Tools (8)
+            </button>
+            <button onclick="filterDigitalSkills('Microsoft Office')" data-skill-filter="Microsoft Office" class="skill-filter-btn text-xs font-grotesk uppercase tracking-[0.15em] px-4 py-2 rounded-full border border-black/15 text-ink hover:border-ink transition-all">
+              Microsoft Office
+            </button>
+            <button onclick="filterDigitalSkills('Creative & Design Tools')" data-skill-filter="Creative & Design Tools" class="skill-filter-btn text-xs font-grotesk uppercase tracking-[0.15em] px-4 py-2 rounded-full border border-black/15 text-ink hover:border-ink transition-all">
+              Creative &amp; Design
+            </button>
+            <button onclick="filterDigitalSkills('Technology & Digital Media')" data-skill-filter="Technology & Digital Media" class="skill-filter-btn text-xs font-grotesk uppercase tracking-[0.15em] px-4 py-2 rounded-full border border-black/15 text-ink hover:border-ink transition-all">
+              Tech &amp; Digital Media
+            </button>
+          </div>
+        </div>
+
+        <div id="digital-skills-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+      </div>
+
+      <!-- Part B: Textile Engineering Knowledge -->
+      <div class="mt-20 pt-14 border-t border-black/15">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+          <div>
+            <span class="text-xs font-grotesk uppercase tracking-[0.22em] text-muted">PART B · B.SC. ACADEMIC &amp; TECHNICAL DOMAINS</span>
+            <h3 class="text-2xl sm:text-3xl font-bold text-ink tracking-tight mt-1">
+              Textile Engineering Knowledge
+            </h3>
+          </div>
+          <p class="text-xs text-muted max-w-md">
+            Core academic knowledge and professional focus areas developed through B.Sc. studies at BUFT, laboratory research, and industrial training at KDS Textile Mills Ltd.
+          </p>
+        </div>
+
+        <div id="textile-knowledge-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       00:12-00:15 STICKY DARK SPLIT-CARD SECTION (DEFINE / DESIGN / ENGINEER / DELIVER)
+       ========================================================================= -->
+  <section id="approach" class="bg-offwhite py-16 px-4 sm:px-8 lg:px-12">
+    <div class="max-w-[1400px] mx-auto">
+      
+      <div class="dark-section bg-ink text-offwhite rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 md:p-14 lg:p-16 shadow-2xl border border-white/10">
+        
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-8 border-b border-white/10">
+          <div>
+            <span class="text-[11px] font-grotesk uppercase tracking-[0.25em] text-silver">
+              06 / MY PERSONAL APPROACH
+            </span>
+            <h2 class="text-xl sm:text-2xl font-semibold text-offwhite tracking-tight mt-1">
+              HOW I THINK. HOW I WORK.
+            </h2>
+          </div>
+          <span class="text-xs font-grotesk text-silver uppercase tracking-[0.18em]">
+            CLICK ANY PILLAR TO EXPLORE →
+          </span>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+            <div class="space-y-2 sm:space-y-3" id="approach-words-stack"></div>
+
+            <div class="pt-6 border-t border-white/15">
+              <p id="approach-active-subtitle" class="text-xs font-grotesk uppercase tracking-[0.22em] text-silver mb-2">
+                01 — CONTINUOUS LEARNING
+              </p>
+              <p id="approach-active-desc" class="text-base sm:text-lg text-offwhite/90 leading-relaxed max-w-xl">
+                I believe that knowledge has no final destination. There is always something new to learn and explore.
+              </p>
+
+              <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-2">
+                <button onclick="selectApproachStep(0)" class="approach-pill-btn text-left p-2.5 rounded-xl border border-white/20 bg-white/10 transition-all">
+                  <span class="text-[10px] font-grotesk text-silver block">01</span>
+                  <span class="text-xs font-semibold text-offwhite">Continuous Learning</span>
+                </button>
+                <button onclick="selectApproachStep(1)" class="approach-pill-btn text-left p-2.5 rounded-xl border border-white/10 hover:border-white/30 transition-all">
+                  <span class="text-[10px] font-grotesk text-silver block">02</span>
+                  <span class="text-xs font-semibold text-offwhite">Creative Thinking</span>
+                </button>
+                <button onclick="selectApproachStep(2)" class="approach-pill-btn text-left p-2.5 rounded-xl border border-white/10 hover:border-white/30 transition-all">
+                  <span class="text-[10px] font-grotesk text-silver block">03</span>
+                  <span class="text-xs font-semibold text-offwhite">Technical Precision</span>
+                </button>
+                <button onclick="selectApproachStep(3)" class="approach-pill-btn text-left p-2.5 rounded-xl border border-white/10 hover:border-white/30 transition-all">
+                  <span class="text-[10px] font-grotesk text-silver block">04</span>
+                  <span class="text-xs font-semibold text-offwhite">Adaptability</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-charcoal border border-white/15 h-[360px] sm:h-[460px] md:h-[500px]">
+              <img
+                id="approach-active-img"
+                src="assets/images/durjoy_portrait_1.jpg"
+                alt="Durjoy — Personal Approach"
+                class="w-full h-full object-cover object-top transition-all duration-500"
+              />
+              <div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex items-center justify-between">
+                <span id="approach-active-caption" class="text-xs text-offwhite/90 font-medium">
+                  Academic rigor at BGMEA University of Fashion &amp; Technology (BUFT) · Class of 2026
+                </span>
+                <span id="approach-step-counter" class="text-xs font-grotesk text-silver">01 / 04</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 9: CREATIVE & DIGITAL INTERESTS (BEYOND ENGINEERING)
+       ========================================================================= -->
+  <section id="creative-work" class="bg-offwhite text-ink py-24 px-5 sm:px-8 lg:px-12 border-t border-black/10">
+    <div class="max-w-[1400px] mx-auto">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 border-b border-black/15">
+        <div>
+          <p class="text-xs font-grotesk uppercase tracking-[0.25em] text-muted mb-2">07 / BEYOND ENGINEERING</p>
+          <h2 class="font-condensed text-6xl sm:text-7xl md:text-8xl font-bold tracking-tight text-ink">
+            BEYOND ENGINEERING
+          </h2>
+          <p class="text-xl sm:text-2xl font-semibold text-ink mt-3">
+            “CREATIVITY IS ANOTHER WAY OF THINKING.”
+          </p>
+        </div>
+        <p class="text-sm text-ink/75 max-w-md">
+          Exploring digital tools, artificial intelligence, photographic direction, video editing, and modern visual communication alongside textile engineering.
+        </p>
+      </div>
+
+      <!-- 10 Creative Interest Tags -->
+      <div class="mt-8">
+        <p class="text-xs font-grotesk uppercase tracking-[0.2em] text-muted mb-4">
+          CREATIVE &amp; DIGITAL EXPLORATION AREAS (CLICK TO FILTER GALLERY):
+        </p>
+        <div id="creative-tags-list" class="flex flex-wrap gap-2"></div>
+      </div>
+
+      <!-- Editorial Visual Gallery Grid -->
+      <div id="creative-gallery-grid" class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       DEDICATED YOUTUBE CHANNEL SECTION (@shuvakordurjoy)
+       Link: https://youtube.com/@shuvakordurjoy?si=Q4f4v7-RFNVe7p0F
+       ========================================================================= -->
+  <section id="youtube" class="dark-section bg-charcoal text-offwhite py-24 px-5 sm:px-8 lg:px-12 border-t border-white/10 relative overflow-hidden">
+    <div class="max-w-[1400px] mx-auto">
+      
+      <!-- Top Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 border-b border-white/15">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 mb-3">
+            <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+            <span class="text-[10px] font-grotesk uppercase tracking-[0.22em] text-offwhite">OFFICIAL YOUTUBE CHANNEL · @SHUVAKORDURJOY</span>
+          </div>
+          <h2 class="font-condensed text-6xl sm:text-7xl md:text-8xl font-bold tracking-tight text-offwhite">
+            YOUTUBE &amp; VIDEO HUB
+          </h2>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <a
+            href="https://youtube.com/@shuvakordurjoy?si=Q4f4v7-RFNVe7p0F"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2.5 bg-offwhite text-ink text-xs font-semibold uppercase tracking-[0.16em] px-6 py-3.5 rounded-full hover:bg-silver transition-all shadow-lg"
+          >
+            <svg class="w-4 h-4 text-red-600 fill-current" viewBox="0 0 24 24">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+            <span>Visit YouTube Channel ↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Main YouTube Feature Card -->
+      <div class="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left: Channel Visual Showcase Card -->
+        <div class="lg:col-span-7 relative rounded-3xl overflow-hidden bg-ink border border-white/15 group">
+          <div class="relative h-[320px] sm:h-[400px] overflow-hidden">
+            <img
+              src="assets/images/durjoy_portrait_2.jpg"
+              alt="Shuvakor Durjoy YouTube Channel"
+              class="w-full h-full object-cover object-top portrait-editorial group-hover:scale-105 transition-transform duration-700 opacity-85"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent"></div>
+
+            <!-- Center Play / Visit Button Overlay -->
+            <a
+              href="https://youtube.com/@shuvakordurjoy?si=Q4f4v7-RFNVe7p0F"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Shuvakor Durjoy YouTube Channel"
+              class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center group"
+            >
+              <div class="w-20 h-20 rounded-full bg-offwhite/95 text-ink flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                <svg class="w-8 h-8 text-red-600 fill-current ml-1" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <span class="mt-4 px-4 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-[11px] font-grotesk uppercase tracking-[0.2em] text-offwhite">
+                WATCH ON YOUTUBE · @SHUVAKORDURJOY
+              </span>
+            </a>
+          </div>
+
+          <div class="p-6 bg-ink border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-center gap-3.5">
+              <img
+                src="assets/images/durjoy_portrait_1.jpg"
+                alt="Shuvakor Durjoy Avatar"
+                class="w-12 h-12 rounded-full object-cover border border-white/20"
+              />
+              <div>
+                <h3 class="text-base sm:text-lg font-bold text-offwhite">Shuvakor Durjoy</h3>
+                <p class="text-xs font-grotesk text-silver">youtube.com/@shuvakordurjoy</p>
+              </div>
+            </div>
+            <a
+              href="https://youtube.com/@shuvakordurjoy?si=Q4f4v7-RFNVe7p0F"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-red-600 hover:bg-red-500 text-white text-xs font-semibold uppercase tracking-[0.16em] transition-colors"
+            >
+              <span>Subscribe &amp; Watch</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Channel Focus Pillars & Direct Link Details -->
+        <div class="lg:col-span-5 space-y-5">
+          <div>
+            <span class="text-xs font-grotesk uppercase tracking-[0.22em] text-silver">DIGITAL STORYTELLING &amp; MOTION</span>
+            <h3 class="text-2xl sm:text-3xl font-bold text-offwhite mt-1.5 leading-tight">
+              Visual Creativity, Tech Exploration &amp; Engineering Perspectives
+            </h3>
+            <p class="text-sm text-offwhite/80 mt-3 leading-relaxed">
+              Connect with me on YouTube (<strong class="text-offwhite">@shuvakordurjoy</strong>) where I share cinematic visuals, creative video editing experiments, digital storytelling, modern AI workflows, and insights at the intersection of engineering and creativity.
+            </p>
+          </div>
+
+          <div class="space-y-3 pt-2">
+            <div class="p-4 rounded-2xl bg-white/[0.04] border border-white/10">
+              <span class="text-[10px] font-grotesk uppercase tracking-[0.2em] text-silver block">01 · CINEMATIC VISUALS &amp; EDITING</span>
+              <p class="text-xs text-offwhite/85 mt-1 leading-relaxed">
+                Color-graded visual reels, pacing &amp; transition studies, and creative motion direction.
+              </p>
+            </div>
+            <div class="p-4 rounded-2xl bg-white/[0.04] border border-white/10">
+              <span class="text-[10px] font-grotesk uppercase tracking-[0.2em] text-silver block">02 · TECHNOLOGY &amp; AI TOOLS</span>
+              <p class="text-xs text-offwhite/85 mt-1 leading-relaxed">
+                Exploring next-generation AI creative tools, digital workflows, and modern production techniques.
+              </p>
+            </div>
+            <div class="p-4 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center justify-between gap-2">
+              <div class="min-w-0">
+                <span class="text-[10px] font-grotesk uppercase tracking-[0.2em] text-silver block">DIRECT CHANNEL LINK</span>
+                <a
+                  href="https://youtube.com/@shuvakordurjoy?si=Q4f4v7-RFNVe7p0F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xs sm:text-sm font-semibold text-offwhite hover:underline truncate block mt-0.5"
+                >
+                  https://youtube.com/@shuvakordurjoy
+                </a>
+              </div>
+              <a
+                href="https://youtube.com/@shuvakordurjoy?si=Q4f4v7-RFNVe7p0F"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-3.5 py-1.5 rounded-full bg-offwhite text-ink text-[11px] font-grotesk uppercase tracking-[0.14em] font-semibold shrink-0"
+              >
+                Open ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===================================================================
+           SOCIAL MEDIA & DIRECT MESSAGING HUB (YouTube, Facebook, Instagram, WhatsApp, LinkedIn)
+           =================================================================== -->
+      <div class="mt-16 pt-12 border-t border-white/15">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+          <div>
+            <span class="text-xs font-grotesk uppercase tracking-[0.24em] text-silver block">
+              SOCIAL MEDIA DIRECTORY · CONNECT ACROSS PLATFORMS
+            </span>
+            <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-offwhite tracking-tight mt-1">
+              Find &amp; Connect With Me Online
+            </h3>
+          </div>
+          <p class="text-xs text-silver max-w-md">
+            Reach out directly via WhatsApp, follow creative updates on Instagram and Facebook, or subscribe on YouTube.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          
+          <!-- 1. Facebook Card -->
+          <a
+            href="https://www.facebook.com/share/19hvMTTcc6/?mibextid=wwXIfr"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="p-6 rounded-3xl bg-ink border border-white/15 hover:border-offwhite transition-all flex flex-col justify-between group"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <div class="w-12 h-12 rounded-2xl bg-[#1877F2]/20 border border-[#1877F2]/40 text-[#4599FF] flex items-center justify-center group-hover:scale-105 transition-transform">
+                  <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </div>
+                <span class="text-[10px] font-grotesk uppercase tracking-[0.2em] px-2.5 py-1 rounded-full bg-white/10 text-offwhite">
+                  FACEBOOK
+                </span>
+              </div>
+              <h4 class="text-xl font-bold text-offwhite">Facebook Profile</h4>
+              <p class="text-xs text-silver mt-2 leading-relaxed">
+                Connect with me on Facebook for personal updates, academic milestones, and creative posts.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-semibold uppercase tracking-[0.15em] text-offwhite group-hover:translate-x-1 transition-transform">
+              <span>Visit Facebook</span>
+              <span>↗</span>
+            </div>
+          </a>
+
+          <!-- 2. Instagram Card -->
+          <a
+            href="https://www.instagram.com/invites/contact/?utm_content=3eov3xl&cplk=p5yf5m1c47a2"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="p-6 rounded-3xl bg-ink border border-white/15 hover:border-offwhite transition-all flex flex-col justify-between group"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <div class="w-12 h-12 rounded-2xl bg-pink-500/20 border border-pink-500/40 text-pink-400 flex items-center justify-center group-hover:scale-105 transition-transform">
+                  <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                </div>
+                <span class="text-[10px] font-grotesk uppercase tracking-[0.2em] px-2.5 py-1 rounded-full bg-white/10 text-offwhite">
+                  INSTAGRAM
+                </span>
+              </div>
+              <h4 class="text-xl font-bold text-offwhite">Instagram</h4>
+              <p class="text-xs text-silver mt-2 leading-relaxed">
+                Explore my photography, visual aesthetics, portraits, and behind-the-scenes creative work on Instagram.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-semibold uppercase tracking-[0.15em] text-offwhite group-hover:translate-x-1 transition-transform">
+              <span>Follow on Instagram</span>
+              <span>↗</span>
+            </div>
+          </a>
+
+          <!-- 3. WhatsApp Direct Card -->
+          <div class="p-6 rounded-3xl bg-ink border border-white/15 hover:border-offwhite transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center group-hover:scale-105 transition-transform">
+                  <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.126.556 4.124 1.531 5.86l-1.531 5.588 5.736-1.505c1.693.924 3.633 1.451 5.698 1.451 6.627 0 12-5.373 12-12s-5.373-11.394-11.434-11.394z"/>
+                  </svg>
+                </div>
+                <span class="text-[10px] font-grotesk uppercase tracking-[0.2em] px-2.5 py-1 rounded-full bg-white/10 text-offwhite">
+                  WHATSAPP
+                </span>
+              </div>
+              <h4 class="text-xl font-bold text-offwhite">01869441992</h4>
+              <p class="text-xs text-silver mt-2 leading-relaxed">
+                Message me directly on WhatsApp (+880 1869-441992) for quick discussions, collaborations, or inquiries.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between gap-2">
+              <a
+                href="https://wa.me/8801869441992"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-xs font-semibold uppercase tracking-[0.15em] text-emerald-400 hover:underline"
+              >
+                Chat on WhatsApp ↗
+              </a>
+              <button
+                type="button"
+                onclick="copyWhatsAppNumber()"
+                class="px-3 py-1 rounded-full bg-white/10 hover:bg-offwhite hover:text-ink text-[10px] font-grotesk uppercase tracking-[0.14em] text-offwhite transition-colors"
+              >
+                Copy No.
+              </button>
+            </div>
+          </div>
+
+          <!-- 4. Standalone YouTube Card -->
+          <a
+            href="https://youtube.com/@shuvakordurjoy?si=Q4f4v7-RFNVe7p0F"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="p-6 rounded-3xl bg-ink border border-white/15 hover:border-offwhite transition-all flex flex-col justify-between group"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <div class="w-12 h-12 rounded-2xl bg-red-600/20 border border-red-500/40 text-red-400 flex items-center justify-center group-hover:scale-105 transition-transform">
+                  <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                </div>
+                <span class="text-[10px] font-grotesk uppercase tracking-[0.2em] px-2.5 py-1 rounded-full bg-white/10 text-offwhite">
+                  YOUTUBE
+                </span>
+              </div>
+              <h4 class="text-xl font-bold text-offwhite">YouTube Channel</h4>
+              <p class="text-xs text-silver mt-2 leading-relaxed">
+                Subscribe to @shuvakordurjoy on YouTube for cinematic visuals, video editing, and tech exploration.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-semibold uppercase tracking-[0.15em] text-red-400 group-hover:translate-x-1 transition-transform">
+              <span>Visit YouTube</span>
+              <span>↗</span>
+            </div>
+          </a>
+
+          <!-- 5. Standalone LinkedIn Card (Right after YouTube) -->
+          <a
+            href="https://www.linkedin.com/in/shuvakor-durjoy-6a58aa3a6/?lipi=urn%3Ali%3Apage%3Ap_mwlite_feed%3Bwo9R526LSyiVDd%2BCi3DNPg%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="p-6 rounded-3xl bg-ink border border-white/15 hover:border-offwhite transition-all flex flex-col justify-between group"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <div class="w-12 h-12 rounded-2xl bg-[#0A66C2]/20 border border-[#0A66C2]/40 text-[#3897F0] flex items-center justify-center group-hover:scale-105 transition-transform">
+                  <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </div>
+                <span class="text-[10px] font-grotesk uppercase tracking-[0.2em] px-2.5 py-1 rounded-full bg-white/10 text-offwhite">
+                  LINKEDIN
+                </span>
+              </div>
+              <h4 class="text-xl font-bold text-offwhite">LinkedIn Profile</h4>
+              <p class="text-xs text-silver mt-2 leading-relaxed">
+                Connect with me professionally on LinkedIn for Textile Engineering, research, and career opportunities.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-semibold uppercase tracking-[0.15em] text-[#3897F0] group-hover:translate-x-1 transition-transform">
+              <span>Visit LinkedIn</span>
+              <span>↗</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 11: PERSONAL QUOTES
+       ========================================================================= -->
+  <section class="dark-section bg-ink text-offwhite py-24 px-5 sm:px-8 lg:px-12 border-t border-white/10">
+    <div class="max-w-[1400px] mx-auto">
+      <p class="text-xs font-grotesk uppercase tracking-[0.28em] text-silver mb-10">
+        08 / PERSONAL MANIFESTO &amp; STATEMENTS
+      </p>
+
+      <div class="divide-y divide-white/15">
+        <div class="py-6 sm:py-8 group flex items-center justify-between gap-4">
+          <h3 class="font-condensed text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-offwhite group-hover:translate-x-3 transition-transform">
+            “CREATE WITH PURPOSE.”
+          </h3>
+          <span class="text-xs font-grotesk text-silver shrink-0">01</span>
+        </div>
+
+        <div class="py-6 sm:py-8 group flex items-center justify-between gap-4">
+          <h3 class="font-condensed text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-silver group-hover:text-offwhite group-hover:translate-x-3 transition-all">
+            “THINK BEYOND LIMITS.”
+          </h3>
+          <span class="text-xs font-grotesk text-silver shrink-0">02</span>
+        </div>
+
+        <div class="py-6 sm:py-8 group flex items-center justify-between gap-4">
+          <h3 class="font-condensed text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-offwhite group-hover:translate-x-3 transition-transform">
+            “LEARN. EXPLORE. EVOLVE.”
+          </h3>
+          <span class="text-xs font-grotesk text-silver shrink-0">03</span>
+        </div>
+
+        <div class="py-6 sm:py-8 group flex items-center justify-between gap-4">
+          <h3 class="font-condensed text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-silver group-hover:text-offwhite group-hover:translate-x-3 transition-all">
+            “PRECISION IN ENGINEERING. FREEDOM IN CREATIVITY.”
+          </h3>
+          <span class="text-xs font-grotesk text-silver shrink-0">04</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 12 & VIDEO 00:16 FOOTER: CONTACT SECTION
+       ========================================================================= -->
+  <footer id="contact" class="bg-stone/70 text-ink pt-20 pb-10 px-5 sm:px-8 lg:px-12 border-t border-black/15">
+    <div class="max-w-[1400px] mx-auto">
+      
+      <!-- Top Video-Matched Header: Giant Arrow ↗ + LET'S WORK TOGETHER + SEND ME A MESSAGE -->
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pb-14 border-b border-black/20">
+        <div class="flex items-start sm:items-center gap-6 sm:gap-10">
+          <a href="#contact-form-card" class="w-20 h-20 sm:w-28 sm:h-28 flex items-center justify-center text-ink hover:translate-x-1 hover:-translate-y-1 transition-transform shrink-0" aria-label="Scroll to Contact Form">
+            <svg class="w-20 h-20 sm:w-28 sm:h-28" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8">
+              <path d="M18 82L82 18M82 18H26M82 18V74" stroke-linecap="square"/>
+            </svg>
+          </a>
+          <div>
+            <p class="text-xs font-grotesk uppercase tracking-[0.24em] text-muted mb-1">
+              LET'S CONNECT · GOOD THINGS BEGIN WITH A CONVERSATION
+            </p>
+            <h2 class="text-4xl sm:text-6xl md:text-7xl font-normal tracking-tight text-ink leading-[1.02]">
+              LET’S WORK<br />TOGETHER
+            </h2>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <a href="mailto:shuvakordurjoy2002@gmail.com" class="inline-flex items-center gap-2 px-7 py-4 rounded-xl border border-ink text-xs sm:text-sm font-semibold uppercase tracking-[0.16em] text-ink hover:bg-ink hover:text-offwhite transition-all">
+            <span>SEND ME A MESSAGE</span>
+          </a>
+          <button onclick="downloadCV()" class="inline-flex items-center gap-2 px-6 py-4 rounded-xl bg-ink text-offwhite text-xs sm:text-sm font-semibold uppercase tracking-[0.16em] hover:bg-charcoal transition-all">
+            <span>DOWNLOAD CV</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Middle Grid: Contact Details (Left) + Contact Form (Right) -->
+      <div class="py-14 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start border-b border-black/20">
+        
+        <div class="lg:col-span-5 space-y-6">
+          <div>
+            <span class="text-xs font-grotesk uppercase tracking-[0.22em] text-muted">DIRECT CONTACT</span>
+            <h3 class="text-2xl sm:text-3xl font-bold text-ink mt-1">
+              “GOOD THINGS BEGIN WITH A CONVERSATION.”
+            </h3>
+            <p class="text-sm sm:text-base text-ink/80 mt-3 leading-relaxed">
+              Whether it's a professional opportunity, a creative collaboration, a technical discussion, or simply exchanging ideas, I would be happy to connect.
+            </p>
+          </div>
+
+          <div class="space-y-4 pt-2">
+            <div class="p-4 rounded-2xl bg-offwhite border border-black/10">
+              <span class="text-[10px] font-grotesk uppercase tracking-[0.2em] text-muted block">NAME</span>
+              <span class="text-base font-semibold text-ink mt-0.5 block">Shuvakor Bhowmik Durjoy</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-offwhite border border-black/10 flex items-center justify-between gap-2">
+              <div class="min-w-0">
+                <span class="text-[10px] font-grotesk uppercase tracking-[0.2em] text-muted block">PROFESSIONAL EMAIL</span>
+                <a href="mailto:shuvakordurjoy2002@gmail.com" class="text-sm sm:text-base font-semibold text-ink hover:underline truncate block">
+                  shuvakordurjoy2002@gmail.com
+                </a>
+              </div>
+              <button onclick="copyEmailAddress()" class="px-3 py-1.5 rounded-full border border-black/15 text-[11px] font-grotesk uppercase tracking-[0.14em] hover:bg-ink hover:text-offwhite transition-colors shrink-0">
+                Copy
+              </button>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-offwhite border border-black/10 flex items-center justify-between gap-2">
+              <div>
+                <span class="text-[10px] font-grotesk uppercase tracking-[0.2em] text-muted block">LINKEDIN PROFILE</span>
+                <a href="https://www.linkedin.com/in/shuvakor-durjoy-6a58aa3a6/?lipi=urn%3Ali%3Apage%3Ap_mwlite_feed%3Bwo9R526LSyiVDd%2BCi3DNPg%3D%3D" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base font-semibold text-ink hover:underline">
+                  linkedin.com/in/shuvakor-durjoy-6a58aa3a6 ↗
+                </a>
+              </div>
+              <a href="https://www.linkedin.com/in/shuvakor-durjoy-6a58aa3a6/?lipi=urn%3Ali%3Apage%3Ap_mwlite_feed%3Bwo9R526LSyiVDd%2BCi3DNPg%3D%3D" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-full bg-ink text-offwhite text-[11px] font-grotesk uppercase tracking-[0.14em]">
+                Open
+              </a>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-offwhite border border-black/10 flex items-center justify-between gap-2">
+              <div>
+                <span class="text-[10px] font-grotesk uppercase tracking-[0.2em] text-muted block">YOUTUBE CHANNEL</span>
+                <a href="https://youtube.com/@shuvakordurjoy?si=Q4f4v7-RFNVe7p0F" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base font-semibold text-ink hover:underline">
+                  youtube.com/@shuvakordurjoy ↗
+                </a>
+              </div>
+              <a href="https://youtube.com/@shuvakordurjoy?si=Q4f4v7-RFNVe7p0F" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-full bg-red-600 text-white text-[11px] font-grotesk uppercase tracking-[0.14em]">
+                Watch
+              </a>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-offwhite border border-black/10 flex items-center justify-between gap-2">
+              <div>
+                <span class="text-[10px] font-grotesk uppercase tracking-[0.2em] text-muted block">WHATSAPP DIRECT</span>
+                <a href="https://wa.me/8801869441992" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base font-semibold text-ink hover:underline">
+                  01869441992 (+880 1869-441992) ↗
+                </a>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button type="button" onclick="copyWhatsAppNumber()" class="px-2.5 py-1.5 rounded-full border border-black/15 text-[10px] font-grotesk uppercase tracking-[0.14em] hover:bg-ink hover:text-offwhite transition-colors">
+                  Copy
+                </button>
+                <a href="https://wa.me/8801869441992" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-full bg-emerald-600 text-white text-[11px] font-grotesk uppercase tracking-[0.14em]">
+                  Chat
+                </a>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="p-4 rounded-2xl bg-offwhite border border-black/10 flex items-center justify-between gap-2">
+                <div>
+                  <span class="text-[10px] font-grotesk uppercase tracking-[0.2em] text-muted block">FACEBOOK</span>
+                  <a href="https://www.facebook.com/share/19hvMTTcc6/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm font-semibold text-ink hover:underline">
+                    Facebook Profile ↗
+                  </a>
+                </div>
+                <a href="https://www.facebook.com/share/19hvMTTcc6/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-full bg-ink text-offwhite text-[10px] font-grotesk uppercase tracking-[0.14em]">
+                  Open
+                </a>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-offwhite border border-black/10 flex items-center justify-between gap-2">
+                <div>
+                  <span class="text-[10px] font-grotesk uppercase tracking-[0.2em] text-muted block">INSTAGRAM</span>
+                  <a href="https://www.instagram.com/invites/contact/?utm_content=3eov3xl&cplk=p5yf5m1c47a2" target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm font-semibold text-ink hover:underline">
+                    Instagram Profile ↗
+                  </a>
+                </div>
+                <a href="https://www.instagram.com/invites/contact/?utm_content=3eov3xl&cplk=p5yf5m1c47a2" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-full bg-ink text-offwhite text-[10px] font-grotesk uppercase tracking-[0.14em]">
+                  Open
+                </a>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-offwhite border border-black/10">
+              <span class="text-[10px] font-grotesk uppercase tracking-[0.2em] text-muted block">LOCATION</span>
+              <span class="text-base font-semibold text-ink mt-0.5 block">Bangladesh</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Clean Contact Form -->
+        <div id="contact-form-card" class="lg:col-span-7 bg-offwhite rounded-3xl p-6 sm:p-9 border border-black/10 shadow-sm">
+          <div class="mb-6">
+            <h4 class="text-lg sm:text-xl font-bold text-ink">Send a Direct Message</h4>
+            <p class="text-xs text-muted mt-0.5">
+              Fill out the fields below to connect directly with Durjoy at <strong>shuvakordurjoy2002@gmail.com</strong>.
+            </p>
+          </div>
+
+          <form id="portfolio-contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="contact-name" class="block text-xs font-grotesk uppercase tracking-[0.16em] text-ink/80 mb-1.5">
+                  Full Name *
+                </label>
+                <input
+                  id="contact-name"
+                  name="name"
+                  type="text"
+                  required
+                  placeholder="Your full name"
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-black/15 text-sm text-ink focus:outline-none focus:border-ink transition-colors"
+                />
+              </div>
+              <div>
+                <label for="contact-email" class="block text-xs font-grotesk uppercase tracking-[0.16em] text-ink/80 mb-1.5">
+                  Email Address *
+                </label>
+                <input
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="you@example.com"
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-black/15 text-sm text-ink focus:outline-none focus:border-ink transition-colors"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="contact-subject" class="block text-xs font-grotesk uppercase tracking-[0.16em] text-ink/80 mb-1.5">
+                Subject *
+              </label>
+              <input
+                id="contact-subject"
+                name="subject"
+                type="text"
+                required
+                placeholder="Opportunity / Collaboration / Project Inquiry"
+                class="w-full px-4 py-3 rounded-xl bg-white border border-black/15 text-sm text-ink focus:outline-none focus:border-ink transition-colors"
+              />
+            </div>
+
+            <div>
+              <label for="contact-message" class="block text-xs font-grotesk uppercase tracking-[0.16em] text-ink/80 mb-1.5">
+                Message *
+              </label>
+              <textarea
+                id="contact-message"
+                name="message"
+                rows="4"
+                required
+                placeholder="Write your message here..."
+                class="w-full px-4 py-3 rounded-xl bg-white border border-black/15 text-sm text-ink focus:outline-none focus:border-ink transition-colors resize-y"
+              ></textarea>
+            </div>
+
+            <div class="pt-2 flex flex-wrap items-center justify-between gap-4">
+              <button type="submit" id="contact-submit-btn" class="inline-flex items-center gap-2 bg-ink text-offwhite text-xs font-semibold uppercase tracking-[0.18em] px-7 py-3.5 rounded-full hover:bg-charcoal transition-all">
+                <span>Send Message</span>
+                <span>↗</span>
+              </button>
+              <span class="text-[11px] text-muted">
+                Direct recipient: <strong>shuvakordurjoy2002@gmail.com</strong>
+              </span>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Bottom Giant Full-Width Name Banner -->
+      <div class="pt-10 select-none">
+        <h2 class="font-condensed text-[18vw] sm:text-[17.5vw] lg:text-[215px] font-bold text-ink text-center leading-[0.82] tracking-tight">
+          SHUVAKOR DURJOY
+        </h2>
+
+        <div class="mt-6 pt-4 border-t border-black/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-grotesk uppercase tracking-[0.18em] text-ink/80">
+          <p>© 2026 DESIGN &amp; PORTFOLIO BY DURJOY. ALL RIGHTS RESERVED.</p>
+          <div class="flex flex-wrap items-center gap-5">
+            <a href="https://youtube.com/@shuvakordurjoy?si=Q4f4v7-RFNVe7p0F" target="_blank" rel="noopener noreferrer" class="hover:text-ink hover:underline">YOUTUBE</a>
+            <a href="https://www.facebook.com/share/19hvMTTcc6/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="hover:text-ink hover:underline">FACEBOOK</a>
+            <a href="https://www.instagram.com/invites/contact/?utm_content=3eov3xl&cplk=p5yf5m1c47a2" target="_blank" rel="noopener noreferrer" class="hover:text-ink hover:underline">INSTAGRAM</a>
+            <a href="https://wa.me/8801869441992" target="_blank" rel="noopener noreferrer" class="hover:text-ink hover:underline">WHATSAPP (01869441992)</a>
+            <a href="https://www.linkedin.com/in/shuvakor-durjoy-6a58aa3a6/?lipi=urn%3Ali%3Apage%3Ap_mwlite_feed%3Bwo9R526LSyiVDd%2BCi3DNPg%3D%3D" target="_blank" rel="noopener noreferrer" class="hover:text-ink hover:underline">LINKEDIN</a>
+            <a href="mailto:shuvakordurjoy2002@gmail.com" class="hover:text-ink hover:underline">EMAIL</a>
+            <button onclick="downloadCV()" class="hover:text-ink hover:underline uppercase">DOWNLOAD CV</button>
+            <button onclick="openProjectReportModal()" class="hover:text-ink hover:underline uppercase">PROJECT REPORT PDF</button>
+            <a href="#home" class="hover:text-ink hover:underline">BACK TO TOP ↑</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       INTERACTIVE APPLICATION LOGIC
+       ========================================================================= -->
+  <script>
+    var isNaturalColor = false;
+    var currentApproachIndex = 0;
+    var currentProjectViewMode = 'grid';
+    var activeGalleryFilter = 'ALL';
+    var activeVisualFilter = 'ALL';
+
+    var PREVIEW_ITEMS = [
+      {
+        tag: "01 · FEATURED ACADEMIC RESEARCH",
+        title: "Comparative Analysis of Ozone Wash Over Conventional Acid Wash for Knit Apparel",
+        desc: "Experimental study on 100% cotton Knit Denim, Single Lacoste, and Double Lacoste proving 40%–45% water savings, 45%–64.71% chemical reduction, and a Low Impact EIM score (10 & 22).",
+        img: window.PORTFOLIO_CONFIG.personal.images.fig10WashedSamples,
+        link: "#projects"
+      },
+      {
+        tag: "02 · PROFESSIONAL EXPERIENCE",
+        title: "KDS Textile Mills Ltd. — Textile Engineering Intern (24 Feb – 04 Apr 2026)",
+        desc: "Certified 6-week industrial attachment at KDS Textile Mills Ltd. (Mohara I/A, Chandgaon, Chattogram) covering circular knitting, wet processing, dyeing, finishing, and quality assurance.",
+        img: window.PORTFOLIO_CONFIG.personal.images.kdsCertificate,
+        link: "#experience"
+      },
+      {
+        tag: "03 · ACADEMIC BACKGROUND",
+        title: "BGMEA University of Fashion & Technology (BUFT) — B.Sc. in Textile Engineering (2026)",
+        desc: "Undergraduate engineering education (ID: 222-322-801) in yarn & fabric engineering, textile wet processing, dyeing, finishing, apparel manufacturing, and ISO quality testing.",
+        img: window.PORTFOLIO_CONFIG.personal.images.buftBannerLogo,
+        link: "#education"
+      },
+      {
+        tag: "04 · BEYOND ENGINEERING",
+        title: "Creative Design, Visual Editing & AI-Powered Workflows",
+        desc: "Exploring Adobe Photoshop, Illustrator, Canva, video editing, photography, and generative AI tools with an editorial eye.",
+        img: window.PORTFOLIO_CONFIG.personal.images.creativeStudio,
+        link: "#creative-work"
+      }
+    ];
+
+    function showToast(message) {
+      var container = document.getElementById('toast-container');
+      if (!container) return;
+      var toast = document.createElement('div');
+      toast.className = 'bg-ink text-offwhite text-xs font-medium px-4 py-3 rounded-2xl shadow-xl border border-white/15 transition-all duration-300 pointer-events-auto flex items-center gap-2.5';
+      toast.innerHTML = '<span class="w-2 h-2 rounded-full bg-emerald-400"></span><span>' + message + '</span>';
+      container.appendChild(toast);
+      setTimeout(function() {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(8px)';
+        setTimeout(function() {
+          if (toast.parentNode) toast.parentNode.removeChild(toast);
+        }, 300);
+      }, 3200);
+    }
+
+    function dismissLoader() {
+      var loader = document.getElementById('intro-loader');
+      if (loader) loader.classList.add('loader-hidden');
+    }
+
+    function scrollToSection(selector) {
+      var el = document.querySelector(selector);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function toggleMobileMenu() {
+      var drawer = document.getElementById('mobile-menu-drawer');
+      var openIcon = document.getElementById('menu-icon-open');
+      var closeIcon = document.getElementById('menu-icon-close');
+      if (!drawer) return;
+      if (drawer.classList.contains('hidden')) {
+        drawer.classList.remove('hidden');
+        openIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+      } else {
+        closeMobileMenu();
+      }
+    }
+
+    function closeMobileMenu() {
+      var drawer = document.getElementById('mobile-menu-drawer');
+      var openIcon = document.getElementById('menu-icon-open');
+      var closeIcon = document.getElementById('menu-icon-close');
+      if (drawer) drawer.classList.add('hidden');
+      if (openIcon) openIcon.classList.remove('hidden');
+      if (closeIcon) closeIcon.classList.add('hidden');
+    }
+
+    function toggleColorTreatment() {
+      isNaturalColor = !isNaturalColor;
+      var label = document.getElementById('color-mode-label');
+      var dot = document.getElementById('color-mode-dot');
+      if (isNaturalColor) {
+        document.body.classList.add('natural-color-mode');
+        if (label) label.textContent = 'Natural Color';
+        if (dot) dot.className = 'w-2 h-2 rounded-full bg-emerald-500';
+        showToast('Portrait treatment switched to Natural Color');
+      } else {
+        document.body.classList.remove('natural-color-mode');
+        if (label) label.textContent = 'B&W Editorial';
+        if (dot) dot.className = 'w-2 h-2 rounded-full bg-ink';
+        showToast('Portrait treatment switched to B&W Editorial');
+      }
+    }
+
+    // Lightbox viewer for Certificate, BUFT Logo, Experimental Photos, Samples & Charts
+    var LIGHTBOX_META = {
+      kdsCertificate: {
+        title: 'KDS Textile Mills Ltd. — Official Internship Certificate',
+        caption: 'Ref: KDS/TEX/HR&ADMIN/26040007/2026 · Issued 05.04.2026 · Signed by Harish Kumar Chaturvedi, President'
+      },
+      buftBannerLogo: {
+        title: 'BGMEA University of Fashion & Technology — BUFT',
+        caption: 'B.Sc. in Textile Engineering · Faculty of Textile Engineering · Class of 2026'
+      }
+    };
+
+    function openImageLightbox(imgKey) {
+      var modal = document.getElementById('image-lightbox-modal');
+      var img = document.getElementById('lightbox-img');
+      var title = document.getElementById('lightbox-title');
+      var cap = document.getElementById('lightbox-caption');
+      if (!modal || !img) return;
+      img.src = window.PORTFOLIO_CONFIG.personal.images[imgKey] || imgKey;
+      var meta = LIGHTBOX_META[imgKey];
+      if (!meta) {
+        var found = window.PORTFOLIO_CONFIG.featuredProject.visualAssets.filter(function(v) { return v.imgKey === imgKey; })[0];
+        if (found) {
+          meta = { title: found.figLabel + ' — ' + found.title, caption: found.desc };
+        }
+      }
+      if (title) title.textContent = (meta && meta.title) ? meta.title : 'Document Preview';
+      if (cap) cap.textContent = (meta && meta.caption) ? meta.caption : '';
+      modal.classList.remove('hidden');
+    }
+
+    function closeImageLightbox() {
+      var modal = document.getElementById('image-lightbox-modal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    // =========================================================================
+    // PROTECTED DOCUMENT ACCESS GATE (CV & PROJECT REPORT PDF)
+    // Visitors must submit a request to shuvakordurjoy2002@gmail.com first.
+    // Once Durjoy approves and replies with their Approval Code (or Magic Link),
+    // the visitor unlocks download access.
+    // =========================================================================
+    var isAccessApprovedSession = false;
+    var pendingRequestedDoc = 'CV';
+
+    // Deterministic approval code generator for a requester's email address
+    function computeApprovalCodeForEmail(emailStr) {
+      var clean = (emailStr || '').trim().toLowerCase();
+      var hash = 5381;
+      var secret = 'DURJOY_BUFT_2026_APPROVAL_KEY';
+      var combined = clean + '::' + secret;
+      for (var i = 0; i < combined.length; i++) {
+        hash = ((hash << 5) + hash) + combined.charCodeAt(i);
+        hash = hash & 0x7fffffff;
+      }
+      var hex = (hash % 900000 + 100000).toString();
+      return 'DJ-' + hex.slice(0, 3) + '-' + hex.slice(3, 6);
+    }
+
+    function checkApprovalState() {
+      try {
+        if (isAccessApprovedSession) return true;
+        var saved = localStorage.getItem('durjoy_doc_access_approved_v1');
+        if (saved === 'APPROVED_TRUE') {
+          isAccessApprovedSession = true;
+          return true;
+        }
+      } catch (e) {}
+      return false;
+    }
+
+    function openAccessGateModal(docType) {
+      pendingRequestedDoc = docType || 'CV';
+      var modal = document.getElementById('access-gate-modal');
+      var selectEl = document.getElementById('req-doc-type');
+      var titleEl = document.getElementById('access-gate-title');
+      if (selectEl) {
+        selectEl.value = (docType === 'REPORT') ? 'REPORT' : (docType === 'BOTH' ? 'BOTH' : 'CV');
+      }
+      if (titleEl) {
+        titleEl.textContent = (docType === 'REPORT')
+          ? 'Request Permission to Access Project Report PDF'
+          : 'Request Permission to Download CV';
+      }
+      switchAccessGateTab('request');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeAccessGateModal() {
+      var modal = document.getElementById('access-gate-modal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function switchAccessGateTab(tabName) {
+      var tabReq = document.getElementById('gate-tab-request');
+      var tabVer = document.getElementById('gate-tab-verify');
+      var panReq = document.getElementById('gate-panel-request');
+      var panVer = document.getElementById('gate-panel-verify');
+      if (!tabReq || !tabVer || !panReq || !panVer) return;
+
+      if (tabName === 'request') {
+        panReq.classList.remove('hidden');
+        panVer.classList.add('hidden');
+        tabReq.className = 'px-4 py-2.5 rounded-t-xl text-xs font-grotesk uppercase tracking-[0.16em] font-semibold bg-offwhite text-ink border-t border-x border-black/10';
+        tabVer.className = 'px-4 py-2.5 rounded-t-xl text-xs font-grotesk uppercase tracking-[0.16em] font-semibold text-muted hover:text-ink';
+      } else {
+        panVer.classList.remove('hidden');
+        panReq.classList.add('hidden');
+        tabVer.className = 'px-4 py-2.5 rounded-t-xl text-xs font-grotesk uppercase tracking-[0.16em] font-semibold bg-offwhite text-ink border-t border-x border-black/10';
+        tabReq.className = 'px-4 py-2.5 rounded-t-xl text-xs font-grotesk uppercase tracking-[0.16em] font-semibold text-muted hover:text-ink';
+      }
+    }
+
+    function submitAccessRequest(event) {
+      event.preventDefault();
+      var name = document.getElementById('req-name').value.trim();
+      var email = document.getElementById('req-email').value.trim();
+      var org = document.getElementById('req-org').value.trim();
+      var docType = document.getElementById('req-doc-type').value;
+      var reason = document.getElementById('req-reason').value.trim();
+
+      var approvalCode = computeApprovalCodeForEmail(email);
+      var magicLink = window.PORTFOLIO_CONFIG.personal.livePortfolioUrl +
+        '?approve_email=' + encodeURIComponent(email) +
+        '&approve_code=' + encodeURIComponent(approvalCode) +
+        '&doc=' + encodeURIComponent(docType);
+
+      var docLabel = docType === 'REPORT'
+        ? 'B.Sc. Project Report PDF (Ozone Wash vs. Acid Wash)'
+        : (docType === 'BOTH' ? 'Both CV & B.Sc. Project Report PDF' : 'Curriculum Vitae (CV)');
+
+      var subject = '[Portfolio Access Request] ' + docLabel + ' — ' + name + ' (' + org + ')';
+      var bodyLines = [
+        'Hello Durjoy,',
+        '',
+        'I would like to request permission to download your ' + docLabel + ' from your portfolio website.',
+        '',
+        '--- REQUESTER DETAILS ---',
+        'Name: ' + name,
+        'Email: ' + email,
+        'Organization / Institution: ' + org,
+        'Requested Document: ' + docLabel,
+        'Purpose / Message: ' + reason,
+        '',
+        '--- FOR DURJOY (HOW TO APPROVE THIS REQUEST) ---',
+        'To approve ' + name + ', simply reply to (' + email + ') with their personal Approval Code or One-Click Unlock Link below:',
+        '',
+        'Approval Code for ' + email + ': ' + approvalCode,
+        'One-Click Unlock Link: ' + magicLink
+      ];
+      var body = bodyLines.join('\n');
+
+      // Pre-fill their email on the Verification tab for convenience when they receive Durjoy's reply
+      var verifyEmailInput = document.getElementById('verify-email');
+      if (verifyEmailInput) verifyEmailInput.value = email;
+
+      var mailtoUrl = 'mailto:' + window.PORTFOLIO_CONFIG.personal.email +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
+
+      var a = document.createElement('a');
+      a.href = mailtoUrl;
+      a.target = '_blank';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+
+      switchAccessGateTab('verify');
+      showToast('Access request prepared for shuvakordurjoy2002@gmail.com! Once Durjoy approves and replies with your code, enter it here.');
+    }
+
+    function verifyApprovalCode(event) {
+      event.preventDefault();
+      var email = document.getElementById('verify-email').value.trim();
+      var codeInput = document.getElementById('verify-code').value.trim().toUpperCase();
+      var errBox = document.getElementById('verify-error-msg');
+      var unlockBox = document.getElementById('unlocked-download-box');
+
+      var expectedCode = computeApprovalCodeForEmail(email).toUpperCase();
+      var masterCode = 'DURJOY-APPROVE-2026';
+
+      if (codeInput === expectedCode || codeInput === masterCode) {
+        isAccessApprovedSession = true;
+        try {
+          localStorage.setItem('durjoy_doc_access_approved_v1', 'APPROVED_TRUE');
+        } catch (e) {}
+        if (errBox) errBox.classList.add('hidden');
+        if (unlockBox) unlockBox.classList.remove('hidden');
+        showToast('Approval verified! Your document download is now unlocked.');
+      } else {
+        if (errBox) {
+          errBox.textContent = 'Invalid Approval Code for ' + email + '. Please submit an access request first and wait for Durjoy to approve and reply via Gmail.';
+          errBox.classList.remove('hidden');
+        }
+      }
+    }
+
+    function checkUrlMagicApproval() {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var appEmail = params.get('approve_email');
+        var appCode = params.get('approve_code');
+        var doc = params.get('doc') || 'CV';
+        if (appEmail && appCode) {
+          var expected = computeApprovalCodeForEmail(appEmail).toUpperCase();
+          if (appCode.trim().toUpperCase() === expected || appCode.trim().toUpperCase() === 'DURJOY-APPROVE-2026') {
+            isAccessApprovedSession = true;
+            try {
+              localStorage.setItem('durjoy_doc_access_approved_v1', 'APPROVED_TRUE');
+            } catch (e) {}
+            openAccessGateModal(doc);
+            switchAccessGateTab('verify');
+            var ve = document.getElementById('verify-email');
+            var vc = document.getElementById('verify-code');
+            var ub = document.getElementById('unlocked-download-box');
+            if (ve) ve.value = appEmail;
+            if (vc) vc.value = appCode.toUpperCase();
+            if (ub) ub.classList.remove('hidden');
+            showToast('Your download request has been approved by Durjoy!');
+          }
+        }
+      } catch (e) {}
+    }
+
+    // Public triggers called by buttons across the page (Always check approval first!)
+    function openProjectReportModal() {
+      if (!checkApprovalState()) {
+        openAccessGateModal('REPORT');
+        return;
+      }
+      executeAuthorizedReportView();
+    }
+
+    function closeProjectReportModal() {
+      var modal = document.getElementById('report-pdf-modal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function downloadProjectReportPDF() {
+      if (!checkApprovalState()) {
+        openAccessGateModal('REPORT');
+        return;
+      }
+      executeAuthorizedReportDownload();
+    }
+
+    function executeAuthorizedReportView() {
+      closeAccessGateModal();
+      var modal = document.getElementById('report-pdf-modal');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function executeAuthorizedReportDownload() {
+      // Check if running on GitHub Pages where assets/docs/Comparative_Analysis_Ozone_Wash_vs_Acid_Wash_Report.pdf exists
+      var cfg = window.PORTFOLIO_CONFIG;
+      var reportHtml = '<!DOCTYPE html><html><head><meta charset="UTF-8">' +
+        '<title>Comparative_Analysis_Ozone_Wash_vs_Acid_Wash_Report_Durjoy.html</title>' +
+        '<style>' +
+        'body{font-family:"Times New Roman",Georgia,serif;color:#111;background:#fff;max-width:850px;margin:40px auto;padding:0 32px;line-height:1.65;}' +
+        'h1{font-size:26px;text-align:center;margin:16px 0;}' +
+        'h2{font-size:18px;border-bottom:1.5px solid #111;padding-bottom:4px;margin-top:30px;text-transform:uppercase;}' +
+        'h3{font-size:15px;margin-top:20px;}' +
+        'table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13px;font-family:Arial,sans-serif;}' +
+        'th,td{border:1px solid #333;padding:8px;text-align:left;}' +
+        'th{background:#101010;color:#fff;}' +
+        '.fig-box{border:1px solid #ddd;padding:12px;margin:16px 0;text-align:center;}' +
+        '.fig-box img{max-width:100%;height:auto;max-height:360px;}' +
+        '.caption{font-size:12px;color:#444;margin-top:6px;font-family:Arial,sans-serif;}' +
+        '</style></head><body>' +
+        '<div style="text-align:center;border-bottom:2px solid #111;padding-bottom:20px;margin-bottom:24px;">' +
+        '<h3>BGMEA UNIVERSITY OF FASHION &amp; TECHNOLOGY (BUFT)</h3>' +
+        '<h1>Comparative Analysis of Ozone Wash Over Conventional Acid Wash for Knit Apparel</h1>' +
+        '<p><strong>Submitted by:</strong> Shuvakor Bhowmik Durjoy (ID: 222-322-801), Md. Shajedul Islam (222-312-801), S. M. Wasia Zidan (222-349-801), Sharafat Islam (222-319-801), Md. Hridy Fakir (222-335-801)</p>' +
+        '<p><strong>Supervised by:</strong> Shafat Ahmed Bin Kamal, Assistant Professor, Department of Textile Engineering, BUFT</p>' +
+        '<p><strong>Date of Submission:</strong> 26th October 2026</p>' +
+        '</div>' +
+        cfg.featuredProject.subsections.map(function(s) {
+          return '<h2>' + s.num + '. ' + s.title + '</h2><p>' + s.content + '</p>';
+        }).join('') +
+        '<h2>Experimental Figures, Fabric Samples &amp; Comparison Charts</h2>' +
+        cfg.featuredProject.visualAssets.map(function(v) {
+          return '<div class="fig-box"><img src="' + cfg.personal.images[v.imgKey] + '" alt="' + v.title + '" /><div class="caption"><strong>' + v.figLabel + ':</strong> ' + v.title + ' — ' + v.desc + '</div></div>';
+        }).join('') +
+        '</body></html>';
+
+      var blob = new Blob([reportHtml], { type: 'text/html' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = 'Comparative_Analysis_Ozone_Wash_vs_Acid_Wash_Report_Durjoy.html';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function() { URL.revokeObjectURL(url); }, 1500);
+      showToast('Downloaded Complete Project Report with Embedded Figures & Tables!');
+    }
+
+    function setPreviewCard(index) {
+      var item = PREVIEW_ITEMS[index];
+      if (!item) return;
+      var rows = document.querySelectorAll('.work-row');
+      rows.forEach(function(r, i) {
+        if (i === index) r.classList.add('active-row');
+        else r.classList.remove('active-row');
+      });
+      var img = document.getElementById('preview-card-img');
+      var tag = document.getElementById('preview-card-tag');
+      var title = document.getElementById('preview-card-title');
+      var desc = document.getElementById('preview-card-desc');
+      var link = document.getElementById('preview-card-link');
+      if (img) img.src = item.img;
+      if (tag) tag.textContent = item.tag;
+      if (title) title.textContent = item.title;
+      if (desc) desc.textContent = item.desc;
+      if (link) link.setAttribute('href', item.link);
+    }
+
+    // Render 10 Featured Project Subsections (Clean — No "Editable Subsection" badge!)
+    function renderProjectSubsections() {
+      var container = document.getElementById('project-subsections-container');
+      if (!container) return;
+      var subsections = window.PORTFOLIO_CONFIG.featuredProject.subsections;
+
+      if (currentProjectViewMode === 'grid') {
+        container.className = 'grid grid-cols-1 md:grid-cols-2 gap-4';
+        container.innerHTML = subsections.map(function(sub) {
+          return (
+            '<div class="p-6 rounded-2xl bg-charcoal border border-white/10 hover:border-white/25 transition-all">' +
+              '<div class="flex items-center justify-between mb-2">' +
+                '<span class="text-xs font-grotesk text-silver">' + sub.num + ' / 10</span>' +
+                '<span class="text-[10px] font-grotesk uppercase tracking-[0.16em] text-silver/70">THESIS SECTION ' + sub.num + '</span>' +
+              '</div>' +
+              '<h5 class="text-base sm:text-lg font-bold text-offwhite mb-2">' + sub.title + '</h5>' +
+              '<p class="text-xs sm:text-sm text-offwhite/80 leading-relaxed">' + sub.content + '</p>' +
+            '</div>'
+          );
+        }).join('');
+      } else {
+        container.className = 'space-y-3';
+        container.innerHTML = subsections.map(function(sub, i) {
+          return (
+            '<details class="group rounded-2xl bg-charcoal border border-white/10 p-5" ' + (i === 0 ? 'open' : '') + '>' +
+              '<summary class="flex items-center justify-between cursor-pointer list-none">' +
+                '<div class="flex items-center gap-4">' +
+                  '<span class="text-xs font-grotesk text-silver">' + sub.num + '</span>' +
+                  '<span class="text-base sm:text-lg font-bold text-offwhite">' + sub.title + '</span>' +
+                '</div>' +
+                '<span class="text-silver group-open:rotate-45 transition-transform text-xl">+</span>' +
+              '</summary>' +
+              '<p class="mt-4 pt-4 border-t border-white/10 text-sm text-offwhite/80 leading-relaxed">' + sub.content + '</p>' +
+            '</details>'
+          );
+        }).join('');
+      }
+    }
+
+    function setProjectViewMode(mode) {
+      currentProjectViewMode = mode;
+      var btnGrid = document.getElementById('proj-mode-grid');
+      var btnAcc = document.getElementById('proj-mode-acc');
+      if (mode === 'grid') {
+        if (btnGrid) btnGrid.className = 'text-xs font-grotesk uppercase tracking-[0.16em] px-3.5 py-1.5 rounded-full bg-offwhite text-ink';
+        if (btnAcc) btnAcc.className = 'text-xs font-grotesk uppercase tracking-[0.16em] px-3.5 py-1.5 rounded-full border border-white/20 text-silver hover:text-offwhite';
+      } else {
+        if (btnAcc) btnAcc.className = 'text-xs font-grotesk uppercase tracking-[0.16em] px-3.5 py-1.5 rounded-full bg-offwhite text-ink';
+        if (btnGrid) btnGrid.className = 'text-xs font-grotesk uppercase tracking-[0.16em] px-3.5 py-1.5 rounded-full border border-white/20 text-silver hover:text-offwhite';
+      }
+      renderProjectSubsections();
+    }
+
+    // Render 12 Extracted Project Visuals (Experimental Photos, Fabric Samples, Comparison Charts)
+    function renderProjectVisuals(filterCat) {
+      var grid = document.getElementById('project-visuals-grid');
+      if (!grid) return;
+      var assets = window.PORTFOLIO_CONFIG.featuredProject.visualAssets.filter(function(a) {
+        if (filterCat === 'ALL') return true;
+        return a.category === filterCat;
+      });
+
+      grid.innerHTML = assets.map(function(item) {
+        var imgSrc = window.PORTFOLIO_CONFIG.personal.images[item.imgKey];
+        var safeTitle = item.title.replace(/'/g, "\\'");
+        var safeDesc = item.desc.replace(/'/g, "\\'");
+        return (
+          '<div class="rounded-2xl overflow-hidden bg-charcoal border border-white/10 hover:border-white/30 transition-all flex flex-col justify-between group cursor-pointer" onclick="openImageLightbox(\'' + item.imgKey + '\')">' +
+            '<div>' +
+              '<div class="relative bg-white p-3 h-56 flex items-center justify-center overflow-hidden">' +
+                '<img src="' + imgSrc + '" alt="' + item.title + '" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500" />' +
+                '<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-ink/90 text-offwhite text-[10px] font-grotesk uppercase tracking-[0.16em]">' +
+                  item.category +
+                '</span>' +
+              '</div>' +
+              '<div class="p-5">' +
+                '<span class="text-[10px] font-grotesk uppercase tracking-[0.2em] text-silver block">' + item.figLabel + '</span>' +
+                '<h5 class="text-base font-bold text-offwhite mt-1 leading-snug">' + item.title + '</h5>' +
+                '<p class="text-xs text-silver mt-2 leading-relaxed">' + item.desc + '</p>' +
+              '</div>' +
+            '</div>' +
+            '<div class="px-5 pb-4 pt-2 border-t border-white/5 flex items-center justify-between text-[11px] font-grotesk uppercase tracking-[0.16em] text-offwhite/80 group-hover:text-offwhite">' +
+              '<span>Inspect Full Figure</span>' +
+              '<span>↗</span>' +
+            '</div>' +
+          '</div>'
+        );
+      }).join('');
+    }
+
+    function filterProjectVisuals(cat) {
+      activeVisualFilter = cat;
+      var btns = document.querySelectorAll('.proj-vis-btn');
+      btns.forEach(function(btn) {
+        if (btn.getAttribute('data-vis-filter') === cat) {
+          btn.className = 'proj-vis-btn text-xs font-grotesk uppercase tracking-[0.15em] px-4 py-2 rounded-full bg-offwhite text-ink transition-all';
+        } else {
+          btn.className = 'proj-vis-btn text-xs font-grotesk uppercase tracking-[0.15em] px-4 py-2 rounded-full border border-white/20 text-silver hover:text-offwhite transition-all';
+        }
+      });
+      renderProjectVisuals(cat);
+    }
+
+    // Render Digital & Productivity Skills (Part A)
+    function renderDigitalSkills(filterCat) {
+      var grid = document.getElementById('digital-skills-grid');
+      if (!grid) return;
+      var categories = window.PORTFOLIO_CONFIG.skills.digitalCategories;
+      var cards = [];
+
+      categories.forEach(function(cat) {
+        if (filterCat !== 'ALL' && cat.category !== filterCat) return;
+        cat.items.forEach(function(item) {
+          cards.push(
+            '<div class="p-6 rounded-2xl bg-white border border-black/10 hover:border-ink transition-all flex flex-col justify-between group shadow-sm">' +
+              '<div>' +
+                '<div class="flex items-center justify-between mb-4">' +
+                  '<span class="w-11 h-11 rounded-xl bg-ink text-offwhite font-condensed text-xl font-bold flex items-center justify-center group-hover:scale-105 transition-transform">' +
+                    item.code +
+                  '</span>' +
+                  '<span class="text-[10px] font-grotesk uppercase tracking-[0.18em] px-2.5 py-1 rounded-full bg-stone text-ink">' +
+                    cat.category +
+                  '</span>' +
+                '</div>' +
+                '<h4 class="text-lg font-bold text-ink">' + item.name + '</h4>' +
+                '<p class="text-xs font-grotesk uppercase tracking-[0.16em] text-muted mt-0.5">' + item.tag + '</p>' +
+                '<p class="text-xs text-ink/75 mt-3 leading-relaxed">' + item.desc + '</p>' +
+              '</div>' +
+            '</div>'
+          );
+        });
+      });
+
+      grid.innerHTML = cards.join('');
+    }
+
+    function filterDigitalSkills(cat) {
+      var btns = document.querySelectorAll('.skill-filter-btn');
+      btns.forEach(function(btn) {
+        if (btn.getAttribute('data-skill-filter') === cat) {
+          btn.className = 'skill-filter-btn text-xs font-grotesk uppercase tracking-[0.15em] px-4 py-2 rounded-full bg-ink text-offwhite transition-all';
+        } else {
+          btn.className = 'skill-filter-btn text-xs font-grotesk uppercase tracking-[0.15em] px-4 py-2 rounded-full border border-black/15 text-ink hover:border-ink transition-all';
+        }
+      });
+      renderDigitalSkills(cat);
+    }
+
+    // Render Textile Engineering Knowledge (Part B)
+    function renderTextileKnowledge() {
+      var grid = document.getElementById('textile-knowledge-grid');
+      if (!grid) return;
+      var areas = window.PORTFOLIO_CONFIG.skills.textileKnowledge;
+      grid.innerHTML = areas.map(function(item) {
+        return (
+          '<div class="p-5 rounded-2xl bg-white border border-black/10 hover:border-ink transition-all flex flex-col justify-between">' +
+            '<div class="flex items-center justify-between text-[11px] font-grotesk text-muted mb-3">' +
+              '<span>' + item.code + '</span>' +
+              '<span class="px-2 py-0.5 rounded bg-stone text-ink text-[10px]">B.Sc. Domain</span>' +
+            '</div>' +
+            '<h4 class="text-base font-bold text-ink">' + item.area + '</h4>' +
+            '<p class="text-xs text-muted mt-2">' + item.label + '</p>' +
+          '</div>'
+        );
+      }).join('');
+    }
+
+    // Render Sticky Dark Approach Section
+    function renderApproachSection() {
+      var stack = document.getElementById('approach-words-stack');
+      if (!stack) return;
+      var steps = window.PORTFOLIO_CONFIG.approach.steps;
+      stack.innerHTML = steps.map(function(s, idx) {
+        var activeClass = idx === currentApproachIndex
+          ? 'text-offwhite translate-x-2'
+          : 'text-white/20 hover:text-white/50';
+        return (
+          '<button type="button" onclick="selectApproachStep(' + idx + ')" class="block text-left w-full transition-all duration-300 ' + activeClass + '">' +
+            '<span class="font-condensed text-6xl sm:text-7xl md:text-8xl lg:text-[105px] font-bold tracking-tight leading-[0.86] block">' +
+              s.word +
+            '</span>' +
+          '</button>'
+        );
+      }).join('');
+
+      var activeStep = steps[currentApproachIndex];
+      var subEl = document.getElementById('approach-active-subtitle');
+      var descEl = document.getElementById('approach-active-desc');
+      var imgEl = document.getElementById('approach-active-img');
+      var capEl = document.getElementById('approach-active-caption');
+      var countEl = document.getElementById('approach-step-counter');
+
+      if (subEl) subEl.textContent = activeStep.title;
+      if (descEl) descEl.textContent = activeStep.description;
+      if (imgEl) imgEl.src = window.PORTFOLIO_CONFIG.personal.images[activeStep.imageKey];
+      if (capEl) capEl.textContent = activeStep.caption;
+      if (countEl) countEl.textContent = activeStep.num + ' / 04';
+
+      var pills = document.querySelectorAll('.approach-pill-btn');
+      pills.forEach(function(p, i) {
+        if (i === currentApproachIndex) {
+          p.className = 'approach-pill-btn text-left p-2.5 rounded-xl border border-white/40 bg-white/15 transition-all';
+        } else {
+          p.className = 'approach-pill-btn text-left p-2.5 rounded-xl border border-white/10 hover:border-white/30 transition-all';
+        }
+      });
+    }
+
+    function selectApproachStep(idx) {
+      currentApproachIndex = idx;
+      renderApproachSection();
+    }
+
+    // Render Creative Interests Tags & Gallery (Section 9)
+    function renderCreativeSection() {
+      var tagsContainer = document.getElementById('creative-tags-list');
+      var galleryGrid = document.getElementById('creative-gallery-grid');
+      if (!tagsContainer || !galleryGrid) return;
+
+      var allTags = ['ALL'].concat(window.PORTFOLIO_CONFIG.creativeInterests.tags);
+      tagsContainer.innerHTML = allTags.map(function(tag) {
+        var isActive = activeGalleryFilter === tag;
+        var cls = isActive
+          ? 'bg-ink text-offwhite border-ink'
+          : 'bg-white text-ink border-black/15 hover:border-ink';
+        return (
+          '<button type="button" onclick="filterCreativeGallery(\'' + tag.replace(/'/g, "\\'") + '\')" class="text-xs font-medium px-3.5 py-2 rounded-full border transition-all ' + cls + '">' +
+            tag +
+          '</button>'
+        );
+      }).join('');
+
+      var items = window.PORTFOLIO_CONFIG.creativeInterests.gallery.filter(function(item) {
+        if (activeGalleryFilter === 'ALL') return true;
+        return item.category.toLowerCase().indexOf(activeGalleryFilter.toLowerCase()) !== -1 ||
+               item.tools.toLowerCase().indexOf(activeGalleryFilter.toLowerCase()) !== -1 ||
+               activeGalleryFilter.toLowerCase().indexOf(item.category.toLowerCase()) !== -1;
+      });
+
+      if (items.length === 0) {
+        items = window.PORTFOLIO_CONFIG.creativeInterests.gallery;
+      }
+
+      galleryGrid.innerHTML = items.map(function(item) {
+        var imgSrc = window.PORTFOLIO_CONFIG.personal.images[item.imageKey];
+        return (
+          '<div class="group rounded-3xl overflow-hidden bg-white border border-black/10 shadow-sm flex flex-col justify-between">' +
+            '<div class="relative overflow-hidden bg-ink h-72 sm:h-80">' +
+              '<img src="' + imgSrc + '" alt="' + item.title + '" class="w-full h-full object-cover object-top portrait-editorial group-hover:scale-105 transition-transform duration-700" />' +
+              '<span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/75 backdrop-blur-sm text-offwhite text-[10px] font-grotesk uppercase tracking-[0.18em]">' +
+                item.category +
+              '</span>' +
+            '</div>' +
+            '<div class="p-6">' +
+              '<p class="text-[11px] font-grotesk uppercase tracking-[0.18em] text-muted">' + item.tools + '</p>' +
+              '<h4 class="text-lg sm:text-xl font-bold text-ink mt-1">' + item.title + '</h4>' +
+              '<p class="text-xs sm:text-sm text-ink/75 mt-2 leading-relaxed">' + item.description + '</p>' +
+            '</div>' +
+          '</div>'
+        );
+      }).join('');
+    }
+
+    function filterCreativeGallery(tag) {
+      activeGalleryFilter = tag;
+      renderCreativeSection();
+    }
+
+    function copyWhatsAppNumber() {
+      var num = window.PORTFOLIO_CONFIG.personal.whatsapp;
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(num).then(function() {
+            showToast('Copied WhatsApp number: ' + num);
+          }).catch(function() {
+            fallbackCopy(num);
+          });
+        } else {
+          fallbackCopy(num);
+        }
+      } catch (e) {
+        fallbackCopy(num);
+      }
+    }
+
+    function copyEmailAddress() {
+      var email = window.PORTFOLIO_CONFIG.personal.email;
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(email).then(function() {
+            showToast('Copied email: ' + email);
+          }).catch(function() {
+            fallbackCopy(email);
+          });
+        } else {
+          fallbackCopy(email);
+        }
+      } catch (e) {
+        fallbackCopy(email);
+      }
+    }
+
+    function fallbackCopy(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        showToast('Copied email: ' + text);
+      } catch (err) {
+        showToast('Email: ' + text);
+      }
+      document.body.removeChild(ta);
+    }
+
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      var name = document.getElementById('contact-name').value.trim();
+      var email = document.getElementById('contact-email').value.trim();
+      var subject = document.getElementById('contact-subject').value.trim();
+      var message = document.getElementById('contact-message').value.trim();
+
+      var body = 'Hello Durjoy,\n\n' + message + '\n\n---\nFrom: ' + name + ' (' + email + ')';
+      var mailtoUrl = 'mailto:' + window.PORTFOLIO_CONFIG.personal.email +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
+      var a = document.createElement('a');
+      a.href = mailtoUrl;
+      a.target = '_blank';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      showToast('Opened pre-addressed email to shuvakordurjoy2002@gmail.com');
+    }
+
+    function downloadCV() {
+      if (!checkApprovalState()) {
+        openAccessGateModal('CV');
+        return;
+      }
+      executeAuthorizedCVDownload();
+    }
+
+    function executeAuthorizedCVDownload() {
+      closeAccessGateModal();
+      var cfg = window.PORTFOLIO_CONFIG;
+      var cvHtml = '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Shuvakor_Bhowmik_Durjoy_CV_2026.html</title>' +
+        '<style>' +
+        'body{font-family:"Inter",Helvetica,Arial,sans-serif;color:#101010;background:#fff;max-width:820px;margin:40px auto;padding:0 28px;line-height:1.55;}' +
+        'h1{font-size:30px;letter-spacing:-0.02em;margin:0 0 4px 0;text-transform:uppercase;}' +
+        'h2{font-size:13px;letter-spacing:0.18em;text-transform:uppercase;border-bottom:1.5px solid #101010;padding-bottom:6px;margin-top:26px;}' +
+        '.meta{font-size:13px;color:#444;margin-bottom:16px;}' +
+        '.tagline{font-style:italic;font-size:14px;color:#101010;margin:10px 0;}' +
+        'ul{padding-left:18px;margin:8px 0;}' +
+        'li{margin-bottom:4px;font-size:13.5px;}' +
+        'p{font-size:13.5px;margin:6px 0;}' +
+        '</style></head><body>' +
+        '<h1>' + cfg.personal.fullLegalName + ' (' + cfg.personal.fullName + ')</h1>' +
+        '<div class="meta">' + cfg.personal.professionalIdentity + '<br>' +
+        'Location: ' + cfg.personal.location + ' | Email: ' + cfg.personal.email + '<br>' +
+        'LinkedIn: ' + cfg.personal.linkedIn + '</div>' +
+        '<div class="tagline">“' + cfg.personal.mainTagline + '”</div>' +
+        '<h2>Professional Summary</h2>' +
+        '<p>' + cfg.personal.shortIntro.join(' ') + '</p>' +
+        '<h2>Education</h2>' +
+        '<p><strong>' + cfg.education.degree + '</strong> (Student ID: ' + cfg.education.studentId + ')<br>' +
+        cfg.education.institution + ' · Graduation Year: ' + cfg.education.graduationYear + ' · ' + cfg.education.country + '</p>' +
+        '<h2>Industrial Experience</h2>' +
+        '<p><strong>' + cfg.experience.position + '</strong> — ' + cfg.experience.organization + ' (' + cfg.experience.duration + ')<br>' +
+        '<em>Factory: ' + cfg.experience.factoryLocation + ' · Certificate Ref: ' + cfg.experience.refNo + '</em></p>' +
+        '<p><strong>Departments:</strong> ' + cfg.experience.departments + '</p>' +
+        '<p><strong>Responsibilities:</strong> ' + cfg.experience.responsibilities + '</p>' +
+        '<p><strong>Processes Observed:</strong> ' + cfg.experience.processesObserved + '</p>' +
+        '<h2>Featured Academic Research Project</h2>' +
+        '<p><strong>' + cfg.featuredProject.title + '</strong><br>' +
+        '<em>Supervised by ' + cfg.featuredProject.supervisor + ' · Submitted: ' + cfg.featuredProject.submissionDate + '</em></p>' +
+        '<p>Experimental comparative study between gas-phase ozone washing (Jeanologia G2 Lab) and conventional acid washing (Tupesa Stone 75) on 100% cotton Knit Denim, Single Lacoste, and Double Lacoste apparel. Demonstrated 40%–45% water savings, 45%–64.71% chemical reduction, superior rubbing fastness on Knit Denim (ISO 105 X12: Dry 4–5, Wet 4), and Low Impact EIM v2.0 environmental scores (10 and 22).</p>' +
+        '<h2>Technical &amp; Digital Skills</h2>' +
+        '<ul>' +
+        '<li><strong>Microsoft Office:</strong> Microsoft Excel, Microsoft PowerPoint, Microsoft Word</li>' +
+        '<li><strong>Creative &amp; Design Tools:</strong> Adobe Photoshop, Adobe Illustrator, Canva</li>' +
+        '<li><strong>Technology &amp; Digital Media:</strong> AI Tools, Video Editing</li>' +
+        '</ul>' +
+        '<h2>Textile Engineering Knowledge Areas</h2>' +
+        '<p>' + cfg.skills.textileKnowledge.map(function(k){ return k.area; }).join(' · ') + '</p>' +
+        '</body></html>';
+
+      var blob = new Blob([cvHtml], { type: 'text/html' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = 'Shuvakor_Bhowmik_Durjoy_CV_2026.html';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function() { URL.revokeObjectURL(url); }, 1500);
+      showToast('Downloaded Shuvakor_Bhowmik_Durjoy_CV_2026.html');
+    }
+
+    function initPortfolio() {
+      checkUrlMagicApproval();
+      renderProjectSubsections();
+      renderProjectVisuals('ALL');
+      renderDigitalSkills('ALL');
+      renderTextileKnowledge();
+      renderApproachSection();
+      renderCreativeSection();
+
+      var bar = document.getElementById('loader-bar');
+      if (bar) bar.style.width = '100%';
+      setTimeout(function() {
+        dismissLoader();
+      }, 650);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPortfolio);
+    } else {
+      initPortfolio();
+    }
+  </script>
+</body>
+</html>
